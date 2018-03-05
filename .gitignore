@@ -1,0 +1,14 @@
+coryMS.pdf
+
+*.aux
+*.bcf
+*.ent
+*.idx
+*.lof
+*.log
+*.lot
+*.nlo
+*.out
+*xml
+*synctex.gz
+*.toc
