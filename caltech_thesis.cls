@@ -20,7 +20,7 @@
 \RequirePackage{graphicx}
 
 %% Overleaf 24 Jan: Formatting of ToC and lists
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \let\listoffigurestables\listoffigures
 \appto{\tableofcontents}{\clearpage}
 \appto{\listoffigurestables}{\clearpage}
@@ -177,7 +177,7 @@
      \@degreeaward\par
      \ifstrequal{#1}{logo}{
        \vspace{\stretch{2}}
-       \includegraphics[width=2in]{\@unilogo} \\
+       \includegraphics[width=3in]{\@unilogo} \\
        \vspace{\stretch{1}}
      }{\vfill}
       \MakeUppercase{\@university}\\

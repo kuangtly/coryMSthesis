@@ -13,6 +13,8 @@
 
 \usepackage{hyperref}
 
+
+
 %% Tentative: newtx for better-looking Times
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -132,21 +134,31 @@ Due to the complexity of practical interferometer, the response of interferomete
 
 
 \section{Photon Calibrator (Pcal)}
-
+\subsection{Principle of Photon Calibrator}
 Photon calibrator is an additional laser with high precision intensity modulator. It is installed in front of End-Test-Mass Mirror(ETM) and can push the ETM by radiation force due to its own Laser beam. To generate any artificial h(t) by Pcal, we have to translate desired h(t) into corresponding force F(t) exerting on ETM. This can be done by using equation of motion of the ETM suspend by its suspension system. Then, we control the Pcal Laser output intensity P(t) such that the radiation force exerted on ETM is F(t) we calculated before. If we analyze it frequency domain,  the h(f) introduced by P(f) can be describe by eq:
-
-
-
 
 Original Pcal is proposed by Glasgow group [ref!!]. They use single laser beam hitting on the center of ETM. The problem is that it may introduce drumhead mode vibration of ETM surface (just like the vibration mode you see when you hit the center of a drum), which introduce unwanted h(t) effectively. This problem is solved by LIGO group, who separate the Pcal laser beam into two beams, hitting on the nodal point of drumhead mode on the ETM surface[ref!!].  
 
  —> KAGRA
+
 In order to excite same amplitude h(t) in higher frequency regime, we have to give much larger F(t) since the relationship between x(t) and F(t) in an pendulum ……………….
+
+
+
+\subsection{Why do we need Photon Calibrator}
+\subsection{Tracking Time-dependent Response by Calibration lines}
+
+
+
+
 
 
 
 
 \chapter{Hardware Injection through Photon Calibrator}
+\section{Principle}
+ 
+
 
 Validate IFO by Pcal (Hardware Injection Test)
 As I mentioned in last chapter, the practical response of IFO is very complex. To prevent some unexpected problem including no-linear response of IFO and……  
@@ -168,7 +180,7 @@ High Frequency
 above 1kHz    the transfer function should as flat as possible
 
 
-\subsubsection{CBC Injection Test}
+\subsubsection{Amplitude of Injection Signal}
 
 %\begin{equation}
 %\label{eq:pcaleq}
@@ -213,6 +225,63 @@ Therefore, the overall gain should be set in injection channel, which is in Volt
 
 
 \chapter{Development of Injection Channel}
+
+\section{Requirement of Injection Channel}
+\subsection{Noise Requirement}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=.9\textwidth]{figure/DAC_requirement.eps}
+\caption{Injection Channel Noise Requirement}\label{fig:DAC_noise_requirement}
+\index{figures}
+\end{figure}
+
+\begin{align}
+%\label{eq:}
+   \Delta L(f) &< \frac{1}{10} \times (\text{KAGRA length sensitivity})\\
+   \Delta L(f) =\frac{2 \Delta P(f) \cos(\theta)}{c} \frac{1}{M(2 \pi f)^2} &< \frac{1}{10} \Delta h(f) L
+\end{align}
+
+
+
+
+
+
+
+
+\section{Noise Source of Excitation channel}
+\subsection{Quantization Noise of DAC}
+
+
+The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows like white noise spreading from DC to Nyquist frequency i.e. $Fs/2$.
+The Root Mean Square value of quantization noise has the order of voltage difference corresponding to last digit or Least Significant Bit(LSB). In time domain, we can calculate standard deviation.
+\begin{align}
+%\label{eq:}
+   \sigma_x = \sqrt{\frac{1}{12}} \delta x_{LSB}
+\end{align}
+
+For a 16-bit 64kHz DAC with output range between $\pm 10$Volts, 
+\begin{align}
+%\label{eq:}
+    \sigma_x &= \sqrt{\frac{1}{12}} \delta x_{LSB} \\
+             &= \sqrt{\frac{1}{12}} \frac{(+10)-(-10) \mathrm{Volts}}{2^{16}} \\
+             &= 8.81 \times 10^{-5} \;\mathrm{Volts}
+\end{align}
+
+In frequency Domain, the quantization noise is distributed from DC to 32768Hz; therefore, we have ASD
+\begin{align}
+%\label{eq:}
+    ASD &= \sqrt{PSD} \\
+        &= \sqrt{ \frac{\sigma_x^2}{32768} } \\
+        &= 8.81 \times 10^{-5} \sqrt{\frac{1}{32768}} \\
+        &= 4.87 \times 10^{-7} \;\mathrm{Volts}/\sqrt{\mathrm{Hz}} 
+\end{align}
+
+
+
+
+
+\section{Noise Reduction through de-whitening filter}
 Problem of 16kHz excitation channel 
 Implementation of 64kHz Excitation channel in KAGRA digital system
 
