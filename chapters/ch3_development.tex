@@ -1,0 +1,67 @@
+\chapter{Development of Injection Channel}
+
+\section{Requirement of Injection Channel}
+\subsection{Noise Requirement}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=.9\textwidth]{figure/DAC_requirement.eps}
+\caption{Injection Channel Noise Requirement}\label{fig:DAC_noise_requirement}
+\index{figures}
+\end{figure}
+
+\begin{align}
+%\label{eq:}
+   \Delta L(f) &< \frac{1}{10} \times (\text{KAGRA length sensitivity})\\
+   \Delta L(f) =\frac{2 \Delta P(f) \cos(\theta)}{c} \frac{1}{M(2 \pi f)^2} &< \frac{1}{10} \Delta h(f) L
+\end{align}
+
+
+
+
+
+
+
+
+\section{Noise Source of Excitation channel}
+\subsection{Quantization Noise of DAC}
+
+
+The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows like white noise spreading from DC to Nyquist frequency i.e. $Fs/2$.
+The Root Mean Square value of quantization noise has the order of voltage difference corresponding to last digit or Least Significant Bit(LSB). In time domain, we can calculate standard deviation.
+\begin{align}
+%\label{eq:}
+   \sigma_x = \sqrt{\frac{1}{12}} \delta x_{LSB}
+\end{align}
+
+For a 16-bit 64kHz DAC with output range between $\pm 10$Volts, 
+\begin{align}
+%\label{eq:}
+    \sigma_x &= \sqrt{\frac{1}{12}} \delta x_{LSB} \\
+             &= \sqrt{\frac{1}{12}} \frac{(+10)-(-10) \mathrm{Volts}}{2^{16}} \\
+             &= 8.81 \times 10^{-5} \;\mathrm{Volts}
+\end{align}
+
+In frequency Domain, the quantization noise is distributed from DC to 32768Hz; therefore, we have ASD
+\begin{align}
+%\label{eq:}
+    ASD &= \sqrt{PSD} \\
+        &= \sqrt{ \frac{\sigma_x^2}{32768} } \\
+        &= 8.81 \times 10^{-5} \sqrt{\frac{1}{32768}} \\
+        &= 4.87 \times 10^{-7} \;\mathrm{Volts}/\sqrt{\mathrm{Hz}} 
+\end{align}
+
+
+
+
+
+\section{Noise Reduction through de-whitening filter}
+Problem of 16kHz excitation channel 
+Implementation of 64kHz Excitation channel in KAGRA digital system
+
+Principle of Analog filter
+Design of De-Whitening filter
+Performance test
+Transfer function measurement 
+Noise requirement
+Create Inverse De-Whitening filter
