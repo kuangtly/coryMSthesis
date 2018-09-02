@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapters/ch1_intro.aux
+A level-1 auxiliary file: chapters/ch2_principle.aux
+A level-1 auxiliary file: chapters/ch3_development.aux
+A level-1 auxiliary file: chapters/ch4_discussion.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "mudd2009"
+Warning--I didn't find a database entry for "proquest2006"
+Warning--empty journal in Einstein:happy
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            521 strings with 4608 characters,
+and the built_in function-call counts, 809 in all, are:
+= -- 77
+> -- 33
+< -- 0
++ -- 13
+- -- 10
+* -- 48
+:= -- 148
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 33
+empty$ -- 67
+format.name$ -- 10
+if$ -- 166
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 11
+quote$ -- 0
+skip$ -- 22
+stack$ -- 0
+substring$ -- 36
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 10
+warning$ -- 1
+while$ -- 7
+width$ -- 4
+write$ -- 33
+(There were 3 warnings)
