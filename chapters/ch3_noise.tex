@@ -1,7 +1,7 @@
-\chapter{Development of Injection Channel}
+\chapter{Signal Generating System}
 
-\section{Requirement of Injection Channel}
-\subsection{Noise Requirement}
+\section{Noise Problem of Injection Signal}
+
 
 \begin{figure}[hbt!]
 \centering
@@ -19,12 +19,8 @@
 
 
 
-
-
-
-
-\section{Noise Source of Excitation channel}
-\subsection{Quantization Noise of DAC}
+\subsection{Noise Sources from Control Signal}
+\subsubsection{Quantization Noise of DAC}
 
 
 The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows like white noise spreading from DC to Nyquist frequency i.e. $Fs/2$.
@@ -51,17 +47,9 @@ In frequency Domain, the quantization noise is distributed from DC to 32768Hz; t
         &= 4.87 \times 10^{-7} \;\mathrm{Volts}/\sqrt{\mathrm{Hz}} 
 \end{align}
 
+\subsubsection{Analog circuits}
 
 
+\subsubsection{AC Power Line}
 
 
-\section{Noise Reduction through de-whitening filter}
-Problem of 16kHz excitation channel 
-Implementation of 64kHz Excitation channel in KAGRA digital system
-
-Principle of Analog filter
-Design of De-Whitening filter
-Performance test
-Transfer function measurement 
-Noise requirement
-Create Inverse De-Whitening filter

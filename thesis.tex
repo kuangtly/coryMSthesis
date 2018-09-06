@@ -64,6 +64,8 @@
 %%% For figures
 \usepackage{graphicx}
 %\usepackage{subfig,rotate}
+\usepackage{rotating}
+\usepackage[font=small,labelfont=bf]{caption}
 
 %%% for comments
 \usepackage{verbatim}
@@ -83,7 +85,7 @@
 
 
 \usepackage{amsmath,amssymb}
-
+\usepackage[numbers]{natbib} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Printed vs. online formatting
@@ -232,8 +234,10 @@
 % \include lets us split up the document (and each include starts a new page):
 \include{chapters/ch1_intro}
 \include{chapters/ch2_principle}
-\include{chapters/ch3_development}
-\include{chapters/ch4_discussion}
+\include{chapters/ch3_noise}
+\include{chapters/ch4_DEW}
+\include{chapters/ch5_validation}
+\include{chapters/ch6_discussion}
 
 \appendix % all chapters following will be labeled as appendices
 %\include{template/ch-appendicies/implementation}
@@ -242,7 +246,7 @@
 
 % Make the bibliography single spaced
 \singlespacing
-\bibliographystyle{plain}
+\bibliographystyle{unsrtnat}
 
 % add the Bibliography to the Table of Contents
 \cleardoublepage

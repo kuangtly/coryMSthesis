@@ -1,20 +1,83 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{Einstein:happy}
+\bibitem[Einstein(1920)]{Einstein:happy}
 A~Einstein.
 \newblock {Grundgedanken und Methoden der Relativit{\"a}tstheorie, in ihrer
   Entwicklung dargestellt. Fundamental Ideas and Methods of the Theory of
   Relativity, Presented in Their Development, after 22 Jan 1920}.
 \newblock 1920.
+\newblock URL \url{https://einsteinpapers.press.princeton.edu/vol7-trans/129}.
 
-\bibitem{Einstein:ongw}
+\bibitem[Kennefick(2005)]{Einstein:prl}
+Daniel Kennefick.
+\newblock Einstein versus the physical review.
+\newblock \emph{Physics Today}, 58\penalty0 (9):\penalty0 43--48, 2005.
+\newblock \doi{10.1063/1.2117822}.
+\newblock URL \url{https://doi.org/10.1063/1.2117822}.
+
+\bibitem[Einstein and Rosen(1937)]{Einstein:ongw}
 A.~Einstein and N.~Rosen.
 \newblock On gravitational waves.
-\newblock {\em Journal of the Franklin Institute}, 223(1):43 -- 54, 1937.
+\newblock \emph{Journal of the Franklin Institute}, 223\penalty0 (1):\penalty0
+  43 -- 54, 1937.
+\newblock ISSN 0016-0032.
+\newblock \doi{https://doi.org/10.1016/S0016-0032(37)90583-0}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0016003237905830}.
 
-\bibitem{maggiore:gw1}
+\bibitem[{Hulse} and {Taylor}(1975)]{HulseTaylor:discovery}
+R.~A. {Hulse} and J.~H. {Taylor}.
+\newblock {Discovery of a pulsar in a binary system}.
+\newblock \emph{ApJ}, 195:\penalty0 L51--L53, January 1975.
+\newblock \doi{10.1086/181708}.
+
+\bibitem[Taylor(1994)]{HulseTaylor:gr}
+Joseph~H. Taylor.
+\newblock Binary pulsars and relativistic gravity.
+\newblock \emph{Rev. Mod. Phys.}, 66:\penalty0 711--719, Jul 1994.
+\newblock \doi{10.1103/RevModPhys.66.711}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.66.711}.
+
+\bibitem[Maggiore and Press(2008)]{maggiore:gw1}
 M.~Maggiore and Oxford~University Press.
-\newblock {\em Gravitational Waves: Volume 1: Theory and Experiments}.
+\newblock \emph{Gravitational Waves: Volume 1: Theory and Experiments}.
 \newblock Gravitational Waves. OUP Oxford, 2008.
+\newblock ISBN 9780198570745.
+\newblock URL \url{https://books.google.com.tw/books?id=AqVpQgAACAAJ}.
+
+\bibitem[Rakhmanov(2005)]{ifo:gauge}
+Malik Rakhmanov.
+\newblock Response of test masses to gravitational waves in the local lorentz
+  gauge.
+\newblock \emph{Phys. Rev. D}, 71:\penalty0 084003, Apr 2005.
+\newblock \doi{10.1103/PhysRevD.71.084003}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.71.084003}.
+
+\bibitem[Clubley et~al.(2001)Clubley, Newton, Skeldon, and
+  Hough]{pcal:clubley2001}
+DA~Clubley, GP~Newton, KD~Skeldon, and J~Hough.
+\newblock Calibration of the glasgow 10 m prototype laser interferometric
+  gravitational wave detector using photon pressure.
+\newblock \emph{Physics Letters A}, 283\penalty0 (1-2):\penalty0 85--88, 2001.
+
+\bibitem[Karki(2016)]{pcal:karki2016}
+S~Karki.
+\newblock S. karki et al., rev. sci. instrum. 87, 114503 (2016).
+\newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016.
+
+\bibitem[Daveloza et~al.(2012)Daveloza, Badhan, Diaz, Kawabe, Konverski,
+  Landry, and Savage]{pcal:Daveloza2012}
+H~P Daveloza, M~Afrin Badhan, M~Diaz, K~Kawabe, P~N Konverski, M~Landry, and
+  R~L Savage.
+\newblock Controlling calibration errors in gravitational-wave detectors by
+  precise location of calibration forces.
+\newblock \emph{Journal of Physics: Conference Series}, 363\penalty0
+  (1):\penalty0 012007, 2012.
+\newblock URL \url{http://stacks.iop.org/1742-6596/363/i=1/a=012007}.
 
 \end{thebibliography}
