@@ -1,5 +1,11 @@
 \chapter{Signal Generating System}
 
+\section{KAGRA Digital System as Signal Generator}
+The Digital Control System used in KAGRA is based on Advanced LIGO Digital System. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as Front-End machine in the tunnel. Between the DAC output and experimental device, a customized analog low-pass filter called Anti-Image filter has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
+
+Inside the Front-End machines, the signal that will be sent to DAC are prepared by realtime softwares, which are generated from several building blocks, the realtime models, by customized parser and compiler. Each realtime model will be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) one. Therefore, a mandatary model named Input/Output Processor(IOP) model will always running at 64kHz, communicating with DAC card and other "slave" models, in which people can put digital filters, signal generators, etc.
+
+
 \section{Noise Problem of Injection Signal}
 
 
