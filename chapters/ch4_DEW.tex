@@ -3,7 +3,7 @@
 \chapter{Noise Reduction through De-Whitening Filter}
 
 \section{Concept of De-Whitening Filter}
-Consider a situation in which the Photon Calibrator received white, frequency independent, excitation signal noise, it will generate $1/f^2$ displacement noise on End-Test-Mirror because the force to displacement transfer function contains $1/f^2$ feature. If we put an analog filter that has frequency response proportional to $f^2$ between excitation signal and PCal excitation input port, we may create colored, $f^2$, laser intensity noise from white electrical noise of excitation signal. Then, such colored noise will be whitened by $1/f^2$ force to displacement transfer function. We call the $f^2$ analog filter \emph{De-Whitening filter }
+Considering a situation in which the Photon Calibrator received white, i.e.\ frequency independent, excitation signal noise, it will generate $1/f^2$ displacement noise on End-Test-Mirror because the force to displacement transfer function contains $1/f^2$ feature. If we put an analog filter that has frequency response proportional to $f^2$ between excitation signal and PCal excitation input port, we may create colored, $f^2$, laser intensity noise from white electrical noise of excitation signal. Then, such colored noise will be whitened by $1/f^2$ force to displacement transfer function, becoming white displacement noise. We call the $f^2$ analog filter \emph{De-Whitening filter}.
 
 
 Practically, we use a one pole one zero analog filter with transfer function described in (ref) as our De-Whitening filter. 
@@ -34,16 +34,23 @@ When $R_3=R_4=a$, $C1=C2=C$, Eq.~(\ref{eq:dewtf}) will reduce to
 
 \begin{equation}
 %\label{eq:dewtf}
-    \mathrm{DewTF} = \frac{1+i \omega C (a+ R_b)}{1+\frac{R_b}{R_a} + i \omega C (2 R_b + a(1+\frac{R_b}{R_a}))}
+    \mathrm{DewTF} = 2 \left( \frac{1+i \omega C (a+ R_b)}{1+\frac{R_b}{R_a} + i \omega C (2 R_b + a(1+\frac{R_b}{R_a}))} \right)
 \end{equation}
 
-Practically, we will choose $a=100\Omega << R_a =8.37\mathrm{k}\Omega < R_b =159\mathrm{k}\Omega $ For DC, the gain is 
+Practically, we will choose $a=100\Omega << R_a =8.34(88)\mathrm{k}\Omega < R_b =159.(3)\mathrm{k}\Omega $. For DC, the gain is 
 \begin{equation}
 %\label{eq:dewtf}
-    \mathrm{DewTF}\ \rvert_{\omega=0} = \frac{1}{1+\frac{R_b}{R_a}}
+    \mathrm{DewTF}\ \rvert_{\omega=0} = \frac{2}{1+\frac{R_b}{R_a}} = 0.0996
 \end{equation}
 
-
+It's about factor of ten suppression while the signal gain in high frequency keeps unity.
+The pole and zero frequencies of such circuit are
+\begin{align}
+%\label{eq:dewzp}
+    \mathrm{Zero} &= \frac{1}{2 \pi C (a+R_a)} = OOO \mathrm{Hz} \\
+    \mathrm{Pole} &= \frac{1}{2 \pi C (a+2\frac{R_a R_b}{R_a+R_b})} = OOO \mathrm{Hz}
+\end{align}
+ A simulated overall transfer function by LTspice is showed in Fig. XX 
 
 %\begin{figure}[hbt!]
 %\centering

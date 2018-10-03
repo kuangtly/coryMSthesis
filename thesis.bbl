@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,12 +36,26 @@ R.~A. {Hulse} and J.~H. {Taylor}.
 \newblock \emph{ApJ}, 195:\penalty0 L51--L53, January 1975.
 \newblock \doi{10.1086/181708}.
 
-\bibitem[Taylor(1994)]{HulseTaylor:gr}
+\bibitem[{Taylor} and {Weisberg}(1982)]{HulseTaylor:gr}
+J.~H. {Taylor} and J.~M. {Weisberg}.
+\newblock {A new test of general relativity - Gravitational radiation and the
+  binary pulsar PSR 1913+16}.
+\newblock \emph{\apj}, 253:\penalty0 908--920, February 1982.
+\newblock \doi{10.1086/159690}.
+
+\bibitem[Taylor(1994)]{HulseTaylor:gr2}
 Joseph~H. Taylor.
 \newblock Binary pulsars and relativistic gravity.
 \newblock \emph{Rev. Mod. Phys.}, 66:\penalty0 711--719, Jul 1994.
 \newblock \doi{10.1103/RevModPhys.66.711}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.66.711}.
+
+\bibitem[et~al.(2016)]{gw:150914_det}
+B.~P.~Abbott et~al.
+\newblock Observation of gravitational waves from a binary black hole merger.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, Feb 2016.
+\newblock \doi{10.1103/PhysRevLett.116.061102}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.061102}.
 
 \bibitem[Maggiore and Press(2008)]{maggiore:gw1}
 M.~Maggiore and Oxford~University Press.

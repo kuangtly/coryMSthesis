@@ -1,9 +1,13 @@
 \chapter{Signal Generating System}
 
 \section{KAGRA Digital System as Signal Generator}
-The Digital Control System used in KAGRA is based on Advanced LIGO Digital System. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as Front-End machine in the tunnel. Between the DAC output and experimental device, a customized analog low-pass filter called Anti-Image filter has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
+The Digital Control System used in KAGRA is based on the Advanced LIGO Digital System. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as a Front-End machine in the tunnel. Between the DAC output and experimental device, a customized analog low-pass filter called an Anti-Image filter has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
 
-Inside the Front-End machines, the signal that will be sent to DAC are prepared by realtime softwares, which are generated from several building blocks, the realtime models, by customized parser and compiler. Each realtime model will be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) one. Therefore, a mandatary model named Input/Output Processor(IOP) model will always running at 64kHz, communicating with DAC card and other "slave" models, in which people can put digital filters, signal generators, etc.
+Inside the Front-End machines, the signal that will be sent to DAC are prepared by realtime software, which is generated from several building blocks, the realtime models, by customized parser and compiler. Each realtime model will be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) ones. Therefore, a mandatary model named Input/Output Processor(IOP) model will always run at 64kHz, communicating with a DAC card and other "slave" models, in which 
+
+(people) 
+
+can put digital filters, signal generators, etc.
 
 
 \section{Noise Problem of Injection Signal}
@@ -29,7 +33,7 @@ Inside the Front-End machines, the signal that will be sent to DAC are prepared 
 \subsubsection{Quantization Noise of DAC}
 
 
-The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows like white noise spreading from DC to Nyquist frequency i.e. $Fs/2$.
+The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows up like white noise that is spread from DC to Nyquist frequency, i.e. $Fs/2$.
 The Root Mean Square value of quantization noise has the order of voltage difference corresponding to last digit or Least Significant Bit(LSB). In time domain, we can calculate standard deviation.
 \begin{align}
 %\label{eq:}

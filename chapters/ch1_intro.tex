@@ -1,28 +1,73 @@
 \chapter{Introduction} 
 
-When you got a new camera, you probably will take a lot of testing photos before you start to use it seriously. 
+When you got a new camera, you probably will take a lot of testing photos before you start to use it seriously. Similarly, we would like to test our gravitational wave detector before we use it to see the Universe.
 
-Hardware injection test is a process to verify the performance of interferometer by sending real sample signal into interferometer. Ideally, we should prepare some real gravitational waves as test signal. But it is practically hard to generate large enough artificial gravitational waves that are detectable by current technology. Therefore, as an injection signal, people shake the mirror according to the waveform template, thereby changing arm length correspondingly. 
+Hardware injection test is a process to verify the performance of interferometer by sending sample signals into interferometer. Ideally, we should prepare some real gravitational waves as test signals. But it is practically hard to generate large enough artificial gravitational waves that are detectable by current technology. 
+
+Therefore, instead of generating gravitational waves, people mimic the effect of celestial gravitational waves by displacing the mirror according to the simulated gravitational waveforms, changing arm length correspondingly, , comparing the optical readout in the main interferometer, thereby checking the response of their interferometer. 
+
+Among different ways to push those Test Mass Mirrors in the main interferometer, radiation pressure of external laser beams have been used because its simplicity and stability. A dedicated auxiliary laser system called Photon Calibrator(PCal) has been developed for this purpose. 
+
+In this dissertation, I will briefly explain what is photon calibrator and how it works for calibration and hardware injection purposes. Then, I will discuss the noise problem from current signal generating system that is used to control PCal Laser intensity. Finally, a possible solution, Analog De-Whitening Filter, has been manufactured and tested with Photon Calibrator in Kamioka Gravitational Wave Detector (KAGRA). 
+ 
 
 \section{Introduction to Gravitational Wave}
 \subsection{What is gravitational wave}
 
-In the General Theory of Relativity proposed by Albert Einstein in 1915, phenomena caused by gravity can be interpreted as results of curved spacetime. This is one of his important work after his `Happiest Thought', which recorded in his unpublished article ``Fundamental Ideas and Methods of the Theory of Relativity, Presented in Their Development"\cite{Einstein:happy}. Among different ways to curve our spacetime, which can be described by corresponding metric tensor fields, there exist wavelike solutions describing ripples of spacetime known as gravitational waves.
+In the General Theory of Relativity proposed by Albert Einstein in 1915, phenomena caused by gravity can be interpreted as results of curved spacetime. This is one of his important works after his `Happiest Thought', which recorded in his unpublished article ``Fundamental Ideas and Methods of the Theory of Relativity, Presented in Their Development"\cite{Einstein:happy}. Among different ways to curve our spacetime, which can be described by corresponding metric tensor fields, there exist wavelike solutions describing ripples of spacetime known as gravitational waves.
 
-However, the physical reality of gravitational wave is not so clear to everyone in the early days, even to Even Einstein himself ~\cite{Einstein:prl, Einstein:ongw}. The main problems is that there exist some gauge degree of freedom in the theory due to the arbitrariness of coordinate choices. We have to know whether the gravitational waves we found are just gauge waves (vibration of coordinate) or the wave can have some observable consequences. 
+However, the physical reality of gravitational wave was not so clear to everyone in the early days, even to Einstein himself~\cite{Einstein:prl, Einstein:ongw}. The main problem is that there exist some gauge degree of freedom in the theory due to the arbitrariness of coordinate choices. We have to know whether the gravitational waves we found are just gauge waves (vibration of coordinate) or the wave can have some observable consequences. 
 
-One of the most important observational evidence implying the existence of real gravitational waves is Hulse-Taylor pulsar~\cite{HulseTaylor:discovery}. Taylor demonstrated that the change of pulsar rotation speed can be explained by emission of gravitational wave\cite{HulseTaylor:gr}.  
-....
-Finally, in 2015 September 14.
-GW150914
+One of the most important observational evidence implying the existence of real gravitational waves is the Hulse-Taylor pulsar~\cite{HulseTaylor:discovery}. Taylor demonstrated that the change of pulsar rotation speed can be explained by emission of gravitational wave~\cite{HulseTaylor:gr, HulseTaylor:gr2}.  
+
+% in 2015 September 14th
+Finally, on September 14th, 2015, the first direct detection of gravitational wave signal~\cite{gw:150914_det} is done by Laser Interferometer Gravitational-Wave Observatory(LIGO) detectors in the United States.
 
 \subsection{How to describe gravitational wave}
 
-In Einstein's General Relativity, gravitational effects are realized by geometry of spacetime. According to great mathematician Bernhard Riemann, we can describe the geometry of certain space by telling the "distance" between nearby points in the space. Practically, the information of distance between nearby spacetime points form a tensor called metric, which means the measure of distance. If such metric tensor exist everywhere in our universe, they become metric tensor field, which tell us the shape or geometry of our universe. By choosing a coordinate system, one can write down those corresponding components $g_{\mu\nu}$ of metric tensor g. Now, we can calculate spacetime distance$ds$ between two nearby points by their coordinate separation:
+In Einstein's General Relativity, gravitational effects are realized by geometry of spacetime. According to a great mathematician Bernhard Riemann, we can describe the geometry of certain space by telling the ``distance" between nearby points in the space. Practically, the information of distance between nearby spacetime points form a tensor called metric, which means the measure of distance. By choosing a coordinate system, one can write down those corresponding components of metric tensor $g$.
+\begin{equation}
+    g_{\mu\nu}=
+\left(
+\begin{array}{cccc}
+  g_{00} & g_{01} & g_{02} & g_{03} \\
+  g_{10} & g_{11} & g_{12} & g_{13} \\
+  g_{20} & g_{21} & g_{22} & g_{23} \\
+  g_{30} & g_{31} & g_{32} & g_{33}
+\end{array}
+\right)  
+\end{equation}
+ Now, we can calculate spacetime distance $ds$ between two nearby points by their coordinate separation:
 
 \begin{equation}
     ds^2 = g_{\mu\nu} dx^{\mu} dx^{\nu}
 \end{equation}
+
+
+
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.8\textwidth]{figure/gr/curvedxt.eps}
+\caption{Newtonian versus Einstein's point of view. }\label{fig:grxt}
+\index{figures}
+\end{figure}
+
+
+Through the interaction between matter and spacetime, matter can curve our Universe. The whole story can be resolved by solving Einstein equation,
+\begin{equation}
+\label{eq:einsteineq}
+    R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R = \frac{8 \pi G}{c^4} T_{\mu\nu}
+\end{equation}
+which is a non-linear differential equation of metric tensor field $g_{\mu\nu}(x^{\alpha})$ since the Ricci tensor $R_{\mu\nu}$ contains metric tensor and its differential.
+
+It's similar to the case in Electrodynamics, in which we can have electromagnetic waves solutions by solving Maxwell equations in vacuum, that we can have gravitation wave solutions by solving vacuum Einstein equation. The situation will become even clear if we linearize the Einstein equation and choose coordinate or gauge properly.
+
+%Gravitational phenomenon can be thought as the interaction between matter(Energy-Stress Tensor field) and the spacetime(Metric Tensor filed). This is similar to the case in Electrodynamics, in which the interaction between electrical charges and electrical/magnetic fields give us EM phenomenon. The mathematical formulae that govern EM phenomenon are Maxwell equations. 
+% Given the the spacetime filled with metric tensor field which tell us the shape or geometry of our universe. 
+ 
+ Let's start from 
+
 
 
 
@@ -32,10 +77,10 @@ In Einstein's General Relativity, gravitational effects are realized by geometry
 \end{equation}
 
 
-mathematics….
+%When it comes to gravitational wave, there is a very convenient gauge(coordinate) constrain called Traceless and Transverse gauge. 
 
-TTgauge
-There is a very convenient gauge(coordinate) constrain, which is known as Traceless and Transverse gauge. 
+
+the corresponding coordinates are attached to a set of free falling objects. 
 for perturbation of wave like part metic over Schwarzschild background which represent Earth’s gravity.
 
 
@@ -69,22 +114,117 @@ WE NEED Calibration Calibration Calibration
 Calibration is always the fist step before we measure something by some device.
 For example, to measure the weight of an apple, you should calibrate your scale by putting a “standard kilogram” on it. Then, you can either adjust the scale readout to be 1kg, or record the difference showed in scale readout, which may be used to reconstruct real weight of the apple. However, the spring constant of springs inside the scale could fluctuate due to temperature changes. To accurately measure the weight of the apple, we have to measure the calibration factor (scale readout when we put the standard mass on it.) when we measure the weight of apple, if possible, simultaneously.
 
-Due to the complexity of practical interferometer, the response of interferometer itself to external gravitational source is not only complex but also time-dependent. In reality, we “inject several calibration lines”, which means we shake the End-Test-Mirror by several known frequency and amplitude sine wave. Then, we try to see these standard signal in readout of interferometer. If we can solve 
-……. 
-
+Due to the complexity of practical interferometer, the response of interferometer itself to external gravitational source is not only sophisticated but also time-dependent. In reality, we “inject several calibration lines”, which means we displace the End-Test-Mirror by several known frequency and amplitude sine waves. Then, we try to see these standard signals in the readout of interferometer, thereby solving the response of interferometer.
 
 \subsection{Transfer function of Laser Interferometer with Fabry-Perot Cavity}
+
+
 \subsection{Tracking Time-dependent Response by Calibration lines}
 
 
 
 \section{Photon Calibrator (Pcal)}
 \subsection{Principle of Photon Calibrator}
-Photon calibrator is an additional laser with high precision intensity modulator. It is installed in front of End-Test-Mass Mirror(ETM) and can push the ETM by radiation force due to its own Laser beam. To generate any artificial h(t) by Pcal, we have to translate desired h(t) into corresponding force F(t) exerting on ETM. This can be done by using equation of motion of the ETM suspend by its suspension system. Then, we control the Pcal Laser output intensity P(t) such that the radiation force exerted on ETM is F(t) we calculated before. If we analyze it frequency domain,  the h(f) introduced by P(f) can be describe by eq:
+Photon calibrator is an additional laser with high precision intensity modulator. It is installed in front of End-Test-Mass Mirror(ETM) and can push the ETM by radiation force due to its own Laser beam as depicted in Fig.(XX). To generate any artificial h(t) by Pcal, we have to translate desired h(t) into corresponding force F(t) exerting on ETM. This can be done by using equation of motion of the ETM suspend by its suspension system. Then, we control the Pcal Laser output intensity P(t) such that the radiation force exerted on ETM is F(t) we calculated before. 
 
-Original Pcal is proposed by Glasgow group \cite{pcal:clubley2001}. They use single laser beam hitting on the center of ETM. The problem is that it may introduce drumhead mode vibration of ETM surface (just like the vibration mode you see when you hit the center of a drum), which introduce unwanted h(t) effectively. This problem is solved by LIGO group\cite{pcal:karki2016}, who separate the Pcal laser beam into two beams, hitting on the nodal point of drumhead mode on the ETM surface\cite{pcal:Daveloza2012}.  
+The radiation force caused by a continuous laser beam can be calculated by its momentum transfer per unit time.
 
- —> KAGRA
+\begin{equation}
+    \mathbf{F} = \frac{\Delta \mathbf{p}}{\Delta t}
+\end{equation}
+For our purpose, the laser beam will be almost reflected from ETM. Therefore, the momentum transfer to ETM per unit time should be almost equal to twice of longitudinal momentum flux carried by PCal laser beam.
+
+\begin{equation}
+\label{eq:f2cos}
+    \mathbf{F}_\text{on ETM} = \frac{\Delta \mathbf{p}_\text{ETM}}{\Delta t}
+    = 2 \cos(\theta) \frac{\Delta p_\text{Laser} }{\Delta t}
+\end{equation}
+where $\theta$ is the angle of incident.
+
+Furthermore, one can express the momentum flux of light in terms of its intensity through Eq.(\ref{eq:epc}), which can be derived from either classical point of view with its Poynting vector or Quantum Mechanical approaches that we adopt here by dealing with photons. 
+
+\begin{align}
+   E_{\gamma} &= \hbar \omega \\
+   p_{\gamma} &= \hbar k \\
+              &= \frac{k}{\omega} ~ E_{\gamma} = \frac{1}{c}E_{\gamma}
+\end{align}
+
+\begin{align}
+\label{eq:epc}
+   \underbrace{\frac{\Delta p_{\text{photons}}}{\Delta t}}_{\text{momentum flux due to }\atop \text{photons in a continuous laser beam}}
+   &= \frac{1}{c}
+   \underbrace{ \frac{\Delta E_{\text{photons}}}{\Delta t} }_{\text{Intensity of laser beam}\atop \text{defined as } P}
+   = \frac{P}{c} 
+\end{align}
+
+%\begin{align}
+%    E_{\gamma} &= \hbar \omega \\
+%    p_{\gamma} &= \hbar k \\
+%               &= \frac{k}{\omega} ~ E_{\gamma} = \frac{1}{c}E_{\gamma}   \\
+%    \frac{\Delta p_{\text{photons}}}{\Delta t}
+%    &= \frac{1}{c} \frac{\Delta E_{\text{photons}}}{\Delta t} 
+%    = \frac{P}{c} 
+%\end{align}
+Combining Eq.(\ref{eq:f2cos}) and Eq.(\ref{eq:epc}), the force that PCcal can give ETM is:
+
+\begin{equation}
+\label{eq:pcalforce}
+    F_\text{PCal}(t) = \frac{ 2 \cos(\theta) }{c} P(t) 
+\end{equation}
+
+
+On the other hand, the equation of motion of suspend ETM can be modeled as:
+
+\begin{equation}
+\label{eq:etmeom}
+    \ddot{x}(t) + b \dot{x}(t) + \omega_0^2 x(t) = \frac{F(t)}{M} 
+%    F_\text{PCal}(t) = \frac{ 2 \cos(\theta) }{c} P(t) 
+\end{equation}
+
+%The solution to Eq.(\ref{eq:etmeom}) can be wrote as the combination of homogeneous part and particular solution:
+%
+%\begin{equation}
+%%\label{eq:etmeom}
+%    x(t)=x_h(t)+x_p(t)
+%\end{equation}
+
+
+The impulse response is
+
+\begin{equation}
+%\label{eq:etmeom}
+    x(t)=\frac{b}{\omega_1}e^{-\frac{b}{2}(t-t_0)}\sin[\omega_1 (t-t_0)]
+\end{equation}
+
+
+And the transfer function is
+
+\begin{equation}
+\label{eq:etmtf}
+   x(\omega)=\frac{-1}{\omega^2 - \omega_0^2 + i \omega b}F(\omega)
+\end{equation}
+
+As long as $\omega^2 \gg \omega_0^2$ and $\omega \gg b$, Eq.(\ref{eq:etmtf}) can be approximated as
+
+\begin{equation}
+%\label{eq:etmtf}
+   x(\omega)=\frac{-1}{\omega^2}F(\omega)
+\end{equation}
+
+By substituting the Fourier transformed Eq.({\ref{eq:pcalforce}}) into it, we can get the expression of x(f) introduced by P(f)
+\begin{equation}
+\label{eq:pcaldisp}
+    x(\omega) = \frac{-1}{M \omega} \frac{2  P(f) \cos(\theta)}{c} 
+\end{equation}
+
+
+
+\subsection{Evolution of Photon Calibrator}
+
+Original Pcal is proposed by Glasgow group \cite{pcal:clubley2001}. They use single laser beam hitting on the center of ETM and successfully see these sin waves in the the readout of their interferometer. Later on, GEO...
+
+ is that it may introduce drumhead mode vibration of ETM surface (just like the vibration mode you see when you hit the center of a drum), which introduce unwanted h(t) effectively. This problem is solved by LIGO group\cite{pcal:karki2016}, who separate the Pcal laser beam into two beams, hitting on the nodal point of drumhead mode on the ETM surface\cite{pcal:Daveloza2012}.  
+
 
 In order to excite same amplitude h(t) in higher frequency regime, we have to give much larger F(t) since the relationship between x(t) and F(t) in an pendulum ……………….
 
