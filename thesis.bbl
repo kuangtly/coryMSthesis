@@ -1,9 +1,17 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[et~al.(2017)]{ligo:inj}
+C.~Biwer et~al.
+\newblock Validating gravitational-wave detections: The advanced ligo hardware
+  injection system.
+\newblock \emph{Phys. Rev. D}, 95:\penalty0 062002, Mar 2017.
+\newblock \doi{10.1103/PhysRevD.95.062002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.95.062002}.
 
 \bibitem[Einstein(1920)]{Einstein:happy}
 A~Einstein.
@@ -50,10 +58,11 @@ Joseph~H. Taylor.
 \newblock \doi{10.1103/RevModPhys.66.711}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.66.711}.
 
-\bibitem[et~al.(2016)]{gw:150914_det}
+\bibitem[et~al.(2016{\natexlab{a}})]{gw:150914_det}
 B.~P.~Abbott et~al.
 \newblock Observation of gravitational waves from a binary black hole merger.
-\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, Feb 2016.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, Feb
+  2016{\natexlab{a}}.
 \newblock \doi{10.1103/PhysRevLett.116.061102}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.061102}.
 
@@ -79,10 +88,10 @@ DA~Clubley, GP~Newton, KD~Skeldon, and J~Hough.
   gravitational wave detector using photon pressure.
 \newblock \emph{Physics Letters A}, 283\penalty0 (1-2):\penalty0 85--88, 2001.
 
-\bibitem[Karki(2016)]{pcal:karki2016}
-S~Karki.
-\newblock S. karki et al., rev. sci. instrum. 87, 114503 (2016).
-\newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016.
+\bibitem[et~al.(2016{\natexlab{b}})]{pcal:karki2016}
+S.~Karki et~al.
+\newblock The advanced ligo photon calibrators.
+\newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016{\natexlab{b}}.
 
 \bibitem[Daveloza et~al.(2012)Daveloza, Badhan, Diaz, Kawabe, Konverski,
   Landry, and Savage]{pcal:Daveloza2012}
@@ -93,5 +102,48 @@ H~P Daveloza, M~Afrin Badhan, M~Diaz, K~Kawabe, P~N Konverski, M~Landry, and
 \newblock \emph{Journal of Physics: Conference Series}, 363\penalty0
   (1):\penalty0 012007, 2012.
 \newblock URL \url{http://stacks.iop.org/1742-6596/363/i=1/a=012007}.
+
+\bibitem[Bork(2010)]{dgs:overview}
+Rolf Bork.
+\newblock Advligo cds design overview.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T0900612),
+  2010.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T0900612/public}.
+
+\bibitem[R.~Abbott(2007)]{dgs:aaai}
+J.~Heefner R.~Abbott.
+\newblock Advanced ligo anti-aliasing and anti-image filter function.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T070038),
+  2007.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T070038/public}.
+
+\bibitem[Bork and Ivanov(2012)]{dgs:control.c}
+R.~Bork and A.~Ivanov.
+\newblock Advligo cds realtime sequencer software.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T0900607),
+  2012.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T0900607/public}.
+
+\bibitem[Bork(2012)]{dgs:rcg}
+R.~Bork.
+\newblock Real-time code generator (rcg) software component overview.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T1200291),
+  2012.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T1200291/public}.
+
+\bibitem[R.~Bork(2013)]{dgs:software_app}
+A.~Ivanov R.~Bork, M.~Aronsson.
+\newblock Advligo cds realtime code generator (rcg) application developer's
+  guide.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T080135),
+  2013.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T080135/public}.
+
+\bibitem[Pandey et~al.(2015)Pandey, Wipf, Adhikari, and Rollins]{dac:shaping}
+Ayush Pandey, Christopher Wipf, Rana Adhikari, and Jameson~Graef Rollins.
+\newblock Quantization noise in advanced ligo digital control systems.
+\newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T1500351),
+  2015.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T1500351/public}.
 
 \end{thebibliography}

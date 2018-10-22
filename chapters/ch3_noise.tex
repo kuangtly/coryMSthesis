@@ -1,16 +1,13 @@
 \chapter{Signal Generating System}
 
 \section{KAGRA Digital System as Signal Generator}
-The Digital Control System used in KAGRA is based on the Advanced LIGO Digital System. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as a Front-End machine in the tunnel. Between the DAC output and experimental device, a customized analog low-pass filter called an Anti-Image filter has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
+The Digital Control System used in KAGRA is based on the Advanced LIGO Digital System \cite{dgs:overview}. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as a Front-End machine located around interferometer. Between the DAC output and experimental device, a customized analog low-pass filter called an Anti-Image filter \cite{dgs:aaai} has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
 
-Inside the Front-End machines, the signal that will be sent to DAC are prepared by realtime software, which is generated from several building blocks, the realtime models, by customized parser and compiler. Each realtime model will be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) ones. Therefore, a mandatary model named Input/Output Processor(IOP) model will always run at 64kHz, communicating with a DAC card and other "slave" models, in which 
+Inside a Front-End machine, the signal that will be sent to DAC are prepared by a realtime software \cite{dgs:control.c}, which is generated from several building blocks, realtime models, by a customized parser and compiler \cite{dgs:rcg}. Each realtime model can be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) ones. Therefore, a mandatary model named Input/Output Processor(IOP) model will always run at 64kHz \cite{dgs:control.c}, communicating with a DAC card and other "slave" models, in which people can put digital filters, signal generators, etc \cite{dgs:software_app}.
 
-(people) 
-
-can put digital filters, signal generators, etc.
-
-
+Unfortunately, the noise performance of such general purpose system do not meet the requirement of KAGRA Photon Calibrator in current setup. The detail discussion is explained in following section.  
 \section{Noise Problem of Injection Signal}
+
 
 
 \begin{figure}[hbt!]
