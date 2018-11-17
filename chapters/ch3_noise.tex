@@ -1,11 +1,37 @@
 \chapter{Signal Generating System}
 
-\section{KAGRA Digital System as Signal Generator}
-The Digital Control System used in KAGRA is based on the Advanced LIGO Digital System \cite{dgs:overview}. In this system, analog control signals can be generated from a Digital-Analog Convertor(DAC) installed in any realtime computer known as a Front-End machine located around interferometer. Between the DAC output and experimental device, a customized analog low-pass filter called an Anti-Image filter \cite{dgs:aaai} has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
+\section{KAGRA Digital Control System}
+The Digital Control System used in KAGRA is based on the Advanced LIGO Digital System \cite{dgs:overview}. In this system, analog control signals can be generated from a Digital-to-Analog Convertor(DAC) installed in any realtime computer known as a Front-End machine located around interferometer. Between the DAC output and experimental device, a customized analog low-pass filter called an Anti-Image filter \cite{dgs:aaai} has been installed for removing unwanted high frequency signal, the Image, due to digitized output from DAC. 
 
-Inside a Front-End machine, the signal that will be sent to DAC are prepared by a realtime software \cite{dgs:control.c}, which is generated from several building blocks, realtime models, by a customized parser and compiler \cite{dgs:rcg}. Each realtime model can be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) ones. Therefore, a mandatary model named Input/Output Processor(IOP) model will always run at 64kHz \cite{dgs:control.c}, communicating with a DAC card and other "slave" models, in which people can put digital filters, signal generators, etc \cite{dgs:software_app}.
+Inside a Front-End machine, the signal that will be sent to a DAC are prepared by a realtime software \cite{dgs:control.c}, which is generated from several building blocks, realtime models, by a customized parser and compiler \cite{dgs:rcg}. Each realtime model can be running at specifiable sample rate on a dedicated CPU core. However, currently, all DAC cards installed at KAGRA site are 16bit, 64kHz (65536Hz) ones. Therefore, a mandatary model named Input/Output Processor(IOP) model will always run at 64kHz \cite{dgs:control.c}, communicating with a DAC card and other "slave" models, in which people can put digital filters, signal generators, etc \cite{dgs:software_app}.
 
-Unfortunately, the noise performance of such general purpose system do not meet the requirement of KAGRA Photon Calibrator in current setup. The detail discussion is explained in following section.  
+
+
+On the other hand, the digital system also works as a Data Acquisition System (DAQ). An analog signal coming from a transducer (e.g. a photodiode) can be sampled by an Analog-to-Digital Convertor(ADC). After that, processed by optional digital filters, it could be sent back to an experimental device trough a DAC, be analyzed by an online diagnosis tool, or be stored into a frame file through the frame-builder. To avoid aliasing effect, which is caused by a finite sampling rate, a customized analog low-pass filter, which has the same circuit design as the AI filter, called an Anti-Alias filter \cite{dgs:aaai} has been inserted between the incoming signal and the ADC card.
+\red{ Reference!!! Reference!!!}
+
+Unfortunately, the noise performance of such general purpose system do not meet the requirement of KAGRA Photon Calibrator in current setup. The noise coming from the digital system output can be directly translated into the PCal laser intensity noise, which will displace the ETM in a noisy way.   
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=1\textwidth]{figure/dgs_rack}
+\caption[dgs]{The schematic shows the inside of the KAGRA digital system block in Fig.~(\ref{fig:injsigpath}). A optional whitening chassis is used as a preamplifier that only amplify the signal above 10Hz.     }
+\label{fig:dgs_rack}
+\index{figures}
+\end{figure}
+
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=1\textwidth]{figure/dgs}
+\caption[dgs]{dgs }
+\label{fig:dgs}
+\index{figures}
+\end{figure}
+
+
+
+\clearpage
 \section{Noise Problem of Injection Signal}
 
 
