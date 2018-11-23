@@ -2,12 +2,70 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for kuangtly at 2018-10-21 18:15:47 +0800 
+%% Created for kuangtly at 2018-11-22 08:25:17 +0800 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{ligo:timedep,
+	Abstract = {Calibration of the second-generation LIGO interferometric gravitational-wave detectors employs a method that uses injected periodic modulations to track and compensate for slow temporal variations in the differential length response of the instruments. These detectors utilize feedback control loops to maintain resonance conditions by suppressing differential arm length variations. We describe how the sensing and actuation functions of these servo loops are parameterized and how the slow variations in these parameters are quantified using the injected modulations. We report the results of applying this method to the LIGO detectors and show that it significantly reduces systematic errors in their calibrated outputs.},
+	Author = {D Tuyenbayev and S Karki and J Betzwieser and C Cahillane and E Goetz and K Izumi and S Kandhasamy and J S Kissel and G Mendell and M Wade and A J Weinstein and R L Savage},
+	Date-Added = {2018-11-22 00:24:54 +0000},
+	Date-Modified = {2018-11-22 00:25:14 +0000},
+	Journal = {Classical and Quantum Gravity},
+	Number = {1},
+	Pages = {015002},
+	Title = {Improving LIGO calibration accuracy by tracking and compensating for slow temporal variations},
+	Url = {http://stacks.iop.org/0264-9381/34/i=1/a=015002},
+	Volume = {34},
+	Year = {2017},
+	Bdsk-Url-1 = {http://stacks.iop.org/0264-9381/34/i=1/a=015002}}
+
+@article{ligo:reconstruction,
+	Abstract = {Advanced LIGO's raw detector output needs to be calibrated to compute dimensionless strain ##IMG## [http://ej.iop.org/images/0264-9381/35/9/095015/cqgaab658ieqn001.gif] {$h(t)$} . Calibrated strain data is produced in the time domain using both a low-latency, online procedure and a high-latency, offline procedure. The low-latency ##IMG## [http://ej.iop.org/images/0264-9381/35/9/095015/cqgaab658ieqn002.gif] {$h(t)$} data stream is produced in two stages, the first of which is performed on the same computers that operate the detector's feedback control system. This stage, referred to as the front-end calibration, uses infinite impulse response (IIR) filtering and performs all operations at a 16 384 Hz digital sampling rate. Due to several limitations, this procedure currently introduces certain systematic errors in the calibrated strain data, motivating the second stage of the low-latency procedure, known as the low-latency gstlal calibration pipeline. The gstlal calibration pipeline uses finite impulse response (FIR) filtering to apply corrections to the output of the front-end calibration. It applies time-dependent correction factors to the sensing and actuation components of the calibrated strain to reduce systematic errors. The gstlal calibration pipeline is also used in high latency to recalibrate the data, which is necessary due mainly to online dropouts in the calibrated data and identified improvements to the calibration models or filters.},
+	Author = {A D Viets and M Wade and A L Urban and S Kandhasamy and J Betzwieser and Duncan A Brown and J Burguet-Castell and C Cahillane and E Goetz and K Izumi and S Karki and J S Kissel and G Mendell and R L Savage and X Siemens and D Tuyenbayev and A J Weinstein},
+	Date-Added = {2018-11-21 21:00:46 +0000},
+	Date-Modified = {2018-11-21 21:01:26 +0000},
+	Journal = {Classical and Quantum Gravity},
+	Number = {9},
+	Pages = {095015},
+	Title = {Reconstructing the calibrated strain signal in the Advanced LIGO detectors},
+	Url = {http://stacks.iop.org/0264-9381/35/i=9/a=095015},
+	Volume = {35},
+	Year = {2018},
+	Bdsk-Url-1 = {http://stacks.iop.org/0264-9381/35/i=9/a=095015}}
+
+@article{mif:response,
+	Archiveprefix = {arXiv},
+	Author = {Hall, Evan D. and Cahillane, Craig and Izumi, Kiwamu and Smith, Rory J. E. and Adhikari, Rana X.},
+	Date-Added = {2018-11-21 20:03:33 +0000},
+	Date-Modified = {2018-11-21 20:03:55 +0000},
+	Eprint = {1712.09719},
+	Primaryclass = {astro-ph.IM},
+	Reportnumber = {LIGO-P1700033},
+	Slaccitation = {%%CITATION = ARXIV:1712.09719;%%},
+	Title = {{Systematic calibration error requirements for gravitational-wave detectors via the Cram{\'e}r-Rao bound}},
+	Year = {2017}}
+
+@article{mif:Freise2010,
+	Abstract = {Several km-scale gravitational-wave detectors have been constructed world wide. These instruments combine a number of advanced technologies to push the limits of precision length measurement. The core devices are laser interferometers of a new kind; developed from the classical Michelson topology these interferometers integrate additional optical elements, which significantly change the properties of the optical system. Much of the design and analysis of these laser interferometers can be performed using well-known classical optical techniques, however, the complex optical layouts provide a new challenge. In this review we give a textbook-style introduction to the optical science required for the understanding of modern gravitational wave detectors, as well as other high-precision laser interferometers. In addition, we provide a number of examples for a freely available interferometer simulation software and encourage the reader to use these examples to gain hands-on experience with the discussed optical methods.},
+	Author = {Freise, Andreas and Strain, Kenneth},
+	Date-Added = {2018-11-21 20:01:13 +0000},
+	Date-Modified = {2018-11-21 20:01:31 +0000},
+	Day = {25},
+	Doi = {10.12942/lrr-2010-1},
+	Issn = {1433-8351},
+	Journal = {Living Reviews in Relativity},
+	Month = {Feb},
+	Number = {1},
+	Pages = {1},
+	Title = {Interferometer Techniques for Gravitational-Wave Detection},
+	Url = {https://doi.org/10.12942/lrr-2010-1},
+	Volume = {13},
+	Year = {2010},
+	Bdsk-Url-1 = {https://doi.org/10.12942/lrr-2010-1}}
 
 @article{ligo:inj,
 	Author = {C. Biwer et al.},
@@ -66,7 +124,7 @@
 	Date-Modified = {2018-10-20 08:38:23 +0000},
 	Journal = {LIGO Document Control Center},
 	Number = {Report No. T070038},
-	Title = {Advanced LIGO Anti-aliasing and Anti-image Filter Function },
+	Title = {Advanced LIGO Anti-aliasing and Anti-image Filter Function},
 	Url = {https://dcc.ligo.org/LIGO-T070038/public},
 	Year = {2007},
 	Bdsk-Url-1 = {https://dcc.ligo.org/LIGO-T070038/public}}

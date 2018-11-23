@@ -7,8 +7,8 @@ Inside a Front-End machine, the signal that will be sent to a DAC are prepared b
 
 
 
-On the other hand, the digital system also works as a Data Acquisition System (DAQ). An analog signal coming from a transducer (e.g. a photodiode) can be sampled by an Analog-to-Digital Convertor(ADC). After that, processed by optional digital filters, it could be sent back to an experimental device trough a DAC, be analyzed by an online diagnosis tool, or be stored into a frame file through the frame-builder. To avoid aliasing effect, which is caused by a finite sampling rate, a customized analog low-pass filter, which has the same circuit design as the AI filter, called an Anti-Alias filter \cite{dgs:aaai} has been inserted between the incoming signal and the ADC card.
-\red{ Reference!!! Reference!!!}
+On the other hand, the digital system also works as a Data Acquisition System (DAQ). An analog signal coming from a transducer (e.g.~a photodiode) can be sampled by an Analog-to-Digital Convertor(ADC). After that, processed by optional digital filters, it could be sent back to an experimental device trough a DAC, be analyzed by an online diagnosis tool, or be stored into a frame file through the frame-builder. To avoid aliasing effect, which is caused by a finite sampling rate, a customized analog low-pass filter, which has the same circuit design as the AI filter, called an Anti-Alias filter \cite{dgs:aaai} has been inserted between the incoming signal and the ADC card.
+%\red{ Reference!!! Reference!!!}
 
 Unfortunately, the noise performance of such general purpose system do not meet the requirement of KAGRA Photon Calibrator in current setup. The noise coming from the digital system output can be directly translated into the PCal laser intensity noise, which will displace the ETM in a noisy way.   
 
@@ -24,7 +24,7 @@ Unfortunately, the noise performance of such general purpose system do not meet 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/dgs}
-\caption[dgs]{dgs }
+\caption[An example schematic of a Digital System Rack]{ An example schematic of a Digital System Rack. As a user of Digital system, you may connect your experimental device to the D-sub 9 pin connectors in the front panel of AA/AI chassis. The conversing between analog and digital signal can be done by ADC and DAC cards inside the I/O chassis. In order to synchronize different ADC/DAC cards located over the whole interferometer, a Time Distribution System (TDS) has been build. It receive the timestamp from a GPS antenna and try to synchronize all Timing Slaves to a central Timing Master. Then, in all I/O chassis, synchronized timing slaves can generate clock signals simultaneously.  }
 \label{fig:dgs}
 \index{figures}
 \end{figure}
@@ -34,6 +34,7 @@ Unfortunately, the noise performance of such general purpose system do not meet 
 \clearpage
 \section{Noise Problem of Injection Signal}
 
+The nois
 
 
 \begin{figure}[hbt!]

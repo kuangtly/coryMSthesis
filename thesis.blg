@@ -10,51 +10,52 @@ A level-1 auxiliary file: chapters/ch6_discussion.aux
 The style file: unsrtnat.bst
 Database file #1: thesis.bib
 Warning--empty journal in Einstein:happy
+Warning--empty journal in mif:response
 Warning--there's a number but no volume in dgs:overview
 Warning--there's a number but no volume in dgs:aaai
 Warning--there's a number but no volume in dgs:control.c
 Warning--there's a number but no volume in dgs:rcg
 Warning--there's a number but no volume in dgs:software_app
 Warning--there's a number but no volume in dac:shaping
-You've used 19 entries,
+You've used 22 entries,
             2481 wiz_defined-function locations,
-            709 strings with 8218 characters,
-and the built_in function-call counts, 6723 in all, are:
-= -- 612
-> -- 251
+            726 strings with 9197 characters,
+and the built_in function-call counts, 8499 in all, are:
+= -- 703
+> -- 464
 < -- 16
-+ -- 111
-- -- 72
-* -- 511
-:= -- 1104
-add.period$ -- 83
-call.type$ -- 19
-change.case$ -- 37
-chr.to.int$ -- 18
-cite$ -- 26
-duplicate$ -- 354
-empty$ -- 635
-format.name$ -- 101
-if$ -- 1424
++ -- 185
+- -- 140
+* -- 708
+:= -- 1440
+add.period$ -- 94
+call.type$ -- 22
+change.case$ -- 43
+chr.to.int$ -- 21
+cite$ -- 30
+duplicate$ -- 410
+empty$ -- 737
+format.name$ -- 172
+if$ -- 1759
 int.to.chr$ -- 2
-int.to.str$ -- 20
-missing$ -- 20
-newline$ -- 128
-num.names$ -- 57
-pop$ -- 121
+int.to.str$ -- 23
+missing$ -- 23
+newline$ -- 145
+num.names$ -- 66
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 22
 quote$ -- 0
-skip$ -- 196
+skip$ -- 226
 stack$ -- 0
-substring$ -- 250
-swap$ -- 45
+substring$ -- 292
+swap$ -- 50
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 130
-warning$ -- 7
-while$ -- 51
+type$ -- 151
+warning$ -- 8
+while$ -- 59
 width$ -- 0
-write$ -- 302
-(There were 7 warnings)
+write$ -- 343
+(There were 8 warnings)

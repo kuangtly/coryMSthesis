@@ -1,20 +1,14 @@
-Abstract
+%Photon Calibrator (PCal) can be used as an actuator for injecting artificial test signal into the interferometer to investigate its response to astrophysical gravitational waves. In order to get better performance in high frequency regime, we are developing a new PCal with high power (20 Watt) laser for our KAGRA detector.
+Photon calibrator (Pcal) is a independent device that can provide artificial input to the interferometer by exerting the radiation pressure of its own laser on the test mass mirror in the interferometer. It not only can provide a fiducial length reference for calibration purpose but also can inject simulated gravitational waveforms to verify the response of interferometer to the astrophysical gravitational waves known as hardware injection test. 
+Currently, the injection signals (Excitations) are produced by KAGRA Digital System(DGS). These signals will change the intensity of PCal Laser by acousto-optic modulators (AOM) inside the transmitter module of PCal. However, if the output signal from the Digital System is noisy, it will force AOM to modulate laser intensity according to such noisy control signal, resulting in noisy radiation force on the End Test Mirror (ETM). In this dissertation, we tried to implement and characterize an analog filter known as \emph{De-Whitening filter} between Digital System output and PCal to address the noise problem while keeping the accuracy of injected signals.
 
-
-
-
-
-
-
-
-
-
-%This is a \LaTeX{} template and document class for Ph.D. dissertations at Princeton University. It was created in 2010 by Jeffrey Dwoskin, and adapted from a template provided by the math department. Their original version is available at: \url{http://www.math.princeton.edu/graduate/tex/puthesis.html}
-%
-%This is \textbf{NOT} an official document. Please verify the current Mudd Library dissertation requirements~\cite{mudd2009} and any department-specific requirements before using this template or document class.
+%=================
 %
 %
-%Your abstract can be any length, but should be a maximum of 350 words for a Dissertation for ProQuest's print indicies (or 150 words for a Master's Thesis); otherwise it will be truncated for those uses~\cite{proquest2006}.
+%Nowadays, many gravitational wave events had been detected by ground-based laser interferometers. To achieve these results, properly calibrating these detectors thereby reconstructing the gravitational wave strain data is an indispensable work. 
 %
+%Photon calibrator (Pcal) is a independent device that can provide artificial input to the interferometer by exerting the radiation pressure of its own laser on the test mass mirror in the interferometer. It not only can provide a fiducial length reference for calibration purpose but also can inject simulated gravitational waveforms to verify the response of interferometer to the astrophysical gravitational waves. 
 %
-%Dwoskin Ph.D. Dissertation Template --- version 1.0, 5/19/2010
+%In order to get better performance in high frequency regime, we are developing a new PCal with high power (20 Watt) laser for our Kamioka Gravitational wave detector (KAGRA). However, we found that the noise from the current control system may not meet the requirement of our KAGRA PCal. 
+%
+%In this dissertation, we try to implement and characterize an analog filter known as \emph{De-Whitening filter} to address the noise problem while keeping the accuracy of injected signals.

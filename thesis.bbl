@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -81,17 +81,43 @@ Malik Rakhmanov.
 \newblock \doi{10.1103/PhysRevD.71.084003}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.71.084003}.
 
+\bibitem[Hall et~al.(2017)Hall, Cahillane, Izumi, Smith, and
+  Adhikari]{mif:response}
+Evan~D. Hall, Craig Cahillane, Kiwamu Izumi, Rory J.~E. Smith, and Rana~X.
+  Adhikari.
+\newblock {Systematic calibration error requirements for gravitational-wave
+  detectors via the Cram{\'e}r-Rao bound}.
+\newblock 2017.
+
+\bibitem[Viets et~al.(2018)Viets, Wade, Urban, Kandhasamy, Betzwieser, Brown,
+  Burguet-Castell, Cahillane, Goetz, Izumi, Karki, Kissel, Mendell, Savage,
+  Siemens, Tuyenbayev, and Weinstein]{ligo:reconstruction}
+A~D Viets, M~Wade, A~L Urban, S~Kandhasamy, J~Betzwieser, Duncan~A Brown,
+  J~Burguet-Castell, C~Cahillane, E~Goetz, K~Izumi, S~Karki, J~S Kissel,
+  G~Mendell, R~L Savage, X~Siemens, D~Tuyenbayev, and A~J Weinstein.
+\newblock Reconstructing the calibrated strain signal in the advanced ligo
+  detectors.
+\newblock \emph{Classical and Quantum Gravity}, 35\penalty0 (9):\penalty0
+  095015, 2018.
+\newblock URL \url{http://stacks.iop.org/0264-9381/35/i=9/a=095015}.
+
+\bibitem[Tuyenbayev et~al.(2017)Tuyenbayev, Karki, Betzwieser, Cahillane,
+  Goetz, Izumi, Kandhasamy, Kissel, Mendell, Wade, Weinstein, and
+  Savage]{ligo:timedep}
+D~Tuyenbayev, S~Karki, J~Betzwieser, C~Cahillane, E~Goetz, K~Izumi,
+  S~Kandhasamy, J~S Kissel, G~Mendell, M~Wade, A~J Weinstein, and R~L Savage.
+\newblock Improving ligo calibration accuracy by tracking and compensating for
+  slow temporal variations.
+\newblock \emph{Classical and Quantum Gravity}, 34\penalty0 (1):\penalty0
+  015002, 2017.
+\newblock URL \url{http://stacks.iop.org/0264-9381/34/i=1/a=015002}.
+
 \bibitem[Clubley et~al.(2001)Clubley, Newton, Skeldon, and
   Hough]{pcal:clubley2001}
 DA~Clubley, GP~Newton, KD~Skeldon, and J~Hough.
 \newblock Calibration of the glasgow 10 m prototype laser interferometric
   gravitational wave detector using photon pressure.
 \newblock \emph{Physics Letters A}, 283\penalty0 (1-2):\penalty0 85--88, 2001.
-
-\bibitem[et~al.(2016{\natexlab{b}})]{pcal:karki2016}
-S.~Karki et~al.
-\newblock The advanced ligo photon calibrators.
-\newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016{\natexlab{b}}.
 
 \bibitem[Daveloza et~al.(2012)Daveloza, Badhan, Diaz, Kawabe, Konverski,
   Landry, and Savage]{pcal:Daveloza2012}
@@ -102,6 +128,11 @@ H~P Daveloza, M~Afrin Badhan, M~Diaz, K~Kawabe, P~N Konverski, M~Landry, and
 \newblock \emph{Journal of Physics: Conference Series}, 363\penalty0
   (1):\penalty0 012007, 2012.
 \newblock URL \url{http://stacks.iop.org/1742-6596/363/i=1/a=012007}.
+
+\bibitem[et~al.(2016{\natexlab{b}})]{pcal:karki2016}
+S.~Karki et~al.
+\newblock The advanced ligo photon calibrators.
+\newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016{\natexlab{b}}.
 
 \bibitem[Bork(2010)]{dgs:overview}
 Rolf Bork.

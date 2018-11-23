@@ -1,11 +1,10 @@
 
 \chapter{Hardware Injection through Photon Calibrator}
+
+Hardware inject test is an important way to understand the output form our interferometer. It can help us to check not only the response of our detector like Eq.~\ref{eq:mifres}, but also the property of detector noise in the presence of incoming gravitational waves \cite{ligo:inj}. For both purposes, a hardware injection system with high accuracy and low noise is required. In the mean time, Photon Calibrator is an appealing option as a device providing injecting signals. 
+
 \section{Principle}
-
-
-
- 
- As I described in Sec.\ref{sec:pcalth}, we can generate desired ETM displacement $x(t)$ by changing PCal laser intensity $P(t)$. One can calculate corresponding $P(t)$ by performing inverse Fourier transform to Eq.(\ref{eq:pcaldisp}).
+ As I described in Sec.\ref{sec:pcalth}, we can generate the desired ETM displacement $x(t)$ by changing the PCal laser intensity $P(t)$. One can calculate the corresponding $P(t)$ by performing inverse Fourier transform to Eq.(\ref{eq:pcaldisp}).
  
 \begin{align}
     \int_{-\infty}^{-\infty} x(\omega) e^{i \omega t} ~\mathrm{d} \omega &= 
@@ -25,7 +24,10 @@ where
    \text{Angle of Incident} \qquad   \theta &= 0.72 ~\mathrm{deg}  \\
    \text{Speed of Light} \qquad   c &= 2.998\times10^8 ~\mathrm{m/s} \\
 \end{align*}
-Also, if we have complete suspension model of ETM, we can substitute the $\omega^2$ factor in Eq.(\ref{eq:pcaldispt}) by the full displacement-to-force transfer function.
+
+Whenever you have your GW waveform template in hand, you can plug them into Eq.~(\ref{eq:pcaldispt}). Then the calculated $P(t)$ will be the signal sent into PCal for PCal laser intensity modulation.
+
+Also, if we have the complete model of ETM suspension, we can substitute the $\omega^2$ factor in Eq.(\ref{eq:pcaldispt}) by the full displacement-to-force transfer function. This could be important if we are going to inject some low frequency signals.
 
 
 \pagebreak
@@ -37,7 +39,7 @@ Once we got the necessary P(t) from the desired x(t) through Eq.(\ref{eq:pcaldis
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/injsigpath}
-\caption[Controlling PCal with Digital Control System]{Controlling PCal with Digital Control System. The PCal laser beam that will be sent to ETM is the first order diffracted beam of a 20W input laser form an acousto-optic modulator(AOM). Its intensity is controlled by the control signal from our KAGRA Digital System. An analog feedback control loop called Optical Follower Servo(OFS) has been implemented to reduce non-linear response of AOM and laser intensity noise of 20W input laser.  }
+\caption[Controlling PCal with Digital Control System]{Controlling PCal with Digital Control System. The PCal laser beam that will be sent to ETM is the first order diffracted beam of a 20W input laser form an acousto-optic modulator(AOM). Its intensity is controlled by analog control signals generated form our KAGRA Digital System, which has been used as an arbitrary function generator in this case. An analog feedback control loop called Optical Follower Servo(OFS) has been implemented to reduce non-linear response of AOM and laser intensity noise of 20W input laser.  }
 \label{fig:injsigpath}
 \index{figures}
 \end{figure}
