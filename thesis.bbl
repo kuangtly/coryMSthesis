@@ -1,15 +1,15 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[et~al.(2017)]{ligo:inj}
+\bibitem[et~al.(2017{\natexlab{a}})]{ligo:inj}
 C.~Biwer et~al.
-\newblock Validating gravitational-wave detections: The advanced ligo hardware
-  injection system.
-\newblock \emph{Phys. Rev. D}, 95:\penalty0 062002, Mar 2017.
+\newblock {Validating gravitational-wave detections: The Advanced LIGO hardware
+  injection system}.
+\newblock \emph{Phys. Rev. D}, 95:\penalty0 062002, Mar 2017{\natexlab{a}}.
 \newblock \doi{10.1103/PhysRevD.95.062002}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.95.062002}.
 
@@ -169,6 +169,21 @@ A.~Ivanov R.~Bork, M.~Aronsson.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T080135),
   2013.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T080135/public}.
+
+\bibitem[et~al.(2017{\natexlab{b}})]{kagra:sn}
+Y.~Enomoto et~al.
+\newblock Latest estimated sensitivity of kagra (v201708) *approved*.
+\newblock \emph{JGW Document Database}, \penalty0 (Report No. JGW-T1707038-v7),
+  2017{\natexlab{b}}.
+\newblock URL
+  \url{https://gwdoc.icrr.u-tokyo.ac.jp/cgi-bin/DocDB/ShowDocument?docid=7038}.
+
+\bibitem[et~al.(2016{\natexlab{c}})]{ligo:o1bbh}
+B.~P.~Abbott et~al.
+\newblock Binary black hole mergers in the first advanced ligo observing run.
+\newblock \emph{Phys. Rev. X}, 6:\penalty0 041015, Oct 2016{\natexlab{c}}.
+\newblock \doi{10.1103/PhysRevX.6.041015}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevX.6.041015}.
 
 \bibitem[Pandey et~al.(2015)Pandey, Wipf, Adhikari, and Rollins]{dac:shaping}
 Ayush Pandey, Christopher Wipf, Rana Adhikari, and Jameson~Graef Rollins.

@@ -15,7 +15,7 @@ Unfortunately, the noise performance of such general purpose system do not meet 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/dgs_rack}
-\caption[dgs]{The schematic shows the inside of the KAGRA digital system block in Fig.~(\ref{fig:injsigpath}). A optional whitening chassis is used as a preamplifier that only amplify the signal above 10Hz.     }
+\caption[The schematic shows the inside of the KAGRA digital system block in Fig.~(\ref{fig:injsigpath})]{The schematic shows the inside of the KAGRA digital system block in Fig.~(\ref{fig:injsigpath}). A optional whitening chassis is used as a preamplifier that only amplify the signal above 10Hz.     }
 \label{fig:dgs_rack}
 \index{figures}
 \end{figure}
@@ -34,20 +34,23 @@ Unfortunately, the noise performance of such general purpose system do not meet 
 \clearpage
 \section{Noise Problem of Injection Signal}
 
-The noise contains in the injection signal should not excess the sensitivity curve of the main interferometer. Practically, a $1/10$ safety factor has been considered, which means we set our noise requirement as ten times below the KAGRA sensitivity.  
+The noise contains in the injection signal should not excess the sensitivity curve of the main interferometer. Practically, a $1/10$ safety factor has been considered, which means we set our noise requirement as ten times below the KAGRA sensitivity\cite{kagra:sn}. For the convenience of comparison, we translate the displacement noise requirement into $V/\sqrt{\mathrm{Hz}}$ for electrical excitation signal by considering both the $1/\omega^2$ force-to-length transfer function and the Volt-to-Watt conversion factor that determined by PCal control circuit configuration.
 
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=.9\textwidth]{figure/DAC_requirement.eps}
-\caption{Injection Channel Noise Requirement}\label{fig:DAC_noise_requirement}
+\caption[Injection Channel Noise Requirement]{Injection Channel Noise Requirement. It is calculated by combining Eq.~\ref{eq:pcaldisp} and Eq.~\ref{eq:disp_requirement}.
+}
+
+\label{fig:DAC_noise_requirement}
 \index{figures}
 \end{figure}
 
 \begin{align}
-%\label{eq:}
    \Delta L(f) &< \frac{1}{10} \times (\text{KAGRA length sensitivity})\\
    \Delta L(f) =\frac{2 \Delta P(f) \cos(\theta)}{c} \frac{1}{M(2 \pi f)^2} &< \frac{1}{10} \Delta h(f) L
+   \label{eq:disp_requirement}
 \end{align}
 
 
@@ -57,13 +60,12 @@ The noise contains in the injection signal should not excess the sensitivity cur
 \subsubsection{Quantization Noise of DAC}
 
 
-The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows up like white noise that is spread from DC to Nyquist frequency, i.e. $Fs/2$.
-The Root Mean Square value of quantization noise has the order of voltage difference corresponding to last digit or Least Significant Bit(LSB). In time domain, we can calculate standard deviation.
+The origin of quantization error is coming from the difference between desired analog output and quantized Digital to Analog Converter(DAC) output value. Roughly speaking, it shows up like white noise that is spread from DC to Nyquist frequency, i.e. the half of the sampling frequency $F_s/2$.
+The Root Mean Square value of quantization noise has the order of voltage difference corresponding to last digit or Least Significant Bit(LSB). In time domain, we can calculate its standard deviation.
 \begin{align}
 %\label{eq:}
    \sigma_x = \sqrt{\frac{1}{12}} \delta x_{LSB}
 \end{align}
-
 For a 16-bit 64kHz DAC with output range between $\pm 10$Volts, 
 \begin{align}
 %\label{eq:}
@@ -71,8 +73,7 @@ For a 16-bit 64kHz DAC with output range between $\pm 10$Volts,
              &= \sqrt{\frac{1}{12}} \frac{(+10)-(-10) \mathrm{Volts}}{2^{16}} \\
              &= 8.81 \times 10^{-5} \;\mathrm{Volts}
 \end{align}
-
-In frequency Domain, the quantization noise is distributed from DC to 32768Hz; therefore, we have ASD
+In frequency Domain, the quantization noise is distributed from DC to 32768Hz; therefore, we have the amplitude spectral density (ASD):
 \begin{align}
 %\label{eq:}
     ASD &= \sqrt{PSD} \\
@@ -80,10 +81,12 @@ In frequency Domain, the quantization noise is distributed from DC to 32768Hz; t
         &= 8.81 \times 10^{-5} \sqrt{\frac{1}{32768}} \\
         &= 4.87 \times 10^{-7} \;\mathrm{Volts}/\sqrt{\mathrm{Hz}} 
 \end{align}
+which is a technical limitation of current used signal generating system.
 
-\subsubsection{Analog circuits}
+%\subsubsection{Analog circuits}
 
 
-\subsubsection{AC Power Line}
+\subsubsection{AC Power Lines}
+The frequency of AC power used in in the KAGRA site is 60 Hz. If the AC power sneak into our signal path, it may create 60Hz and its harmonics in our signal. Also, although most of our devices are supplied by DC power, those DC power are rectified from AC power source. With a full-wave rectification circuit, another series of AC power lines started from 120 Hz could be created. In our De-Whitening filter, we do not put too much effort to reduce AC power lines comparing to other board-band noses. We only adopt the standard LM2941/LM2991 voltage regulation circuit and implement it in the De-Whitening chassis. In the future, we should come back to this issue if necessary.
 
 

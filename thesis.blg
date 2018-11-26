@@ -16,46 +16,47 @@ Warning--there's a number but no volume in dgs:aaai
 Warning--there's a number but no volume in dgs:control.c
 Warning--there's a number but no volume in dgs:rcg
 Warning--there's a number but no volume in dgs:software_app
+Warning--there's a number but no volume in kagra:sn
 Warning--there's a number but no volume in dac:shaping
-You've used 22 entries,
+You've used 24 entries,
             2481 wiz_defined-function locations,
-            726 strings with 9197 characters,
-and the built_in function-call counts, 8499 in all, are:
-= -- 703
-> -- 464
-< -- 16
-+ -- 185
-- -- 140
-* -- 708
-:= -- 1440
-add.period$ -- 94
-call.type$ -- 22
-change.case$ -- 43
+            740 strings with 9572 characters,
+and the built_in function-call counts, 9142 in all, are:
+= -- 764
+> -- 478
+< -- 18
++ -- 195
+- -- 144
+* -- 758
+:= -- 1543
+add.period$ -- 103
+call.type$ -- 24
+change.case$ -- 47
 chr.to.int$ -- 21
-cite$ -- 30
-duplicate$ -- 410
-empty$ -- 737
-format.name$ -- 172
-if$ -- 1759
-int.to.chr$ -- 2
-int.to.str$ -- 23
-missing$ -- 23
-newline$ -- 145
-num.names$ -- 66
-pop$ -- 144
+cite$ -- 33
+duplicate$ -- 447
+empty$ -- 802
+format.name$ -- 178
+if$ -- 1895
+int.to.chr$ -- 4
+int.to.str$ -- 25
+missing$ -- 25
+newline$ -- 158
+num.names$ -- 72
+pop$ -- 156
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 24
 quote$ -- 0
-skip$ -- 226
+skip$ -- 242
 stack$ -- 0
-substring$ -- 292
-swap$ -- 50
+substring$ -- 314
+swap$ -- 58
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 151
-warning$ -- 8
-while$ -- 59
+type$ -- 165
+warning$ -- 9
+while$ -- 64
 width$ -- 0
-write$ -- 343
-(There were 8 warnings)
+write$ -- 375
+(There were 9 warnings)

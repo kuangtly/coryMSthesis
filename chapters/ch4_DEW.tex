@@ -3,15 +3,15 @@
 \chapter{Noise Reduction through De-Whitening Filter}
 
 \section{Concept of De-Whitening Filter}
-Considering a situation in which the Photon Calibrator received white, i.e.\ frequency independent, excitation signal noise, it will generate $1/f^2$ displacement noise on End-Test-Mirror because the force to displacement transfer function contains $1/f^2$ feature. If we put an analog filter that has frequency response proportional to $f^2$ between excitation signal and PCal excitation input port, we may create colored, $f^2$, laser intensity noise from white electrical noise of excitation signal. Then, such colored noise will be whitened by $1/f^2$ force to displacement transfer function, becoming white displacement noise. We call the $f^2$ analog filter \emph{De-Whitening filter}.
+Considering a situation in which the Photon Calibrator received white, i.e.~frequency independent, excitation signal noise, it will generate $1/f^2$ displacement noise on End-Test-Mirror because the force-to-displacement transfer function contains a $1/f^2$ feature. If we put an analog filter that has frequency response proportional to $f^2$ between the excitation signal and the PCal excitation input port, we may create colored, $f^2$, laser intensity noise from white electrical noise of the excitation signal. Then, such colored noise will be whitened by the $1/f^2$ force-to-displacement transfer function, becoming white displacement noise. We call the $f^2$ analog filter \emph{De-Whitening filter}.
 
 
-Practically, we use a one pole one zero analog filter with transfer function showed in Fig.(\ref{fig:DEWtf_design}) as our De-Whitening filter. 
+Practically, we use a single zero-pole analog filter with transfer function showed in Fig.(\ref{fig:DEWtf_design}) as our De-Whitening filter. 
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/DEWtf_design}
-\caption[De-Whitening filter transfer function]{De-Whitening filter transfer function. This is the deigned transfer function of De-Whitening filter. It has a pole at 1kHz and a zero at 100Hz. }
+\caption[De-Whitening filter transfer function]{De-Whitening filter transfer function. This is the designed transfer function of De-Whitening filter. It has a pole at 1kHz and a zero at 100Hz. }
 \label{fig:DEWtf_design}
 \index{figures}
 \end{figure}
@@ -35,36 +35,30 @@ The transfer function of this circuit is
 \label{eq:dewtf}
     \mathrm{DewTF} = \underbrace{\frac{Z_A}{Z_A+Z_B}}_{\text{pole-zero stage}} \times \underbrace{2}_{\text{Single to Differential}}
 \end{equation}
-
-
 where
 \begin{align}
     A//B &\equiv \frac{1}{\frac{1}{A}+\frac{1}{B}} \\
     Z_B &= ( R_3 + \frac{1}{i \omega C_2} )~ //~ R_b \\
     Z_A &= ( R_4 + \frac{1}{i \omega C_1} )~ //~ R_a
 \end{align}
-
 When $R_3=R_4=a$, $C1=C2=C$, Eq.~(\ref{eq:dewtf}) will reduce to 
-
 \begin{equation}
 %\label{eq:dewtf}
     \mathrm{DewTF} = 2 \left( \frac{1+i \omega C (a+ R_b)}{1+\frac{R_b}{R_a} + i \omega C (2 R_b + a(1+\frac{R_b}{R_a}))} \right)
 \end{equation}
-
-Practically, we chose $a=100\Omega << R_a =8.34(88)\mathrm{k}\Omega < R_b =159.(3)\mathrm{k}\Omega $. Then, the DC gain is 
+Practically, we chose $a=100\Omega << R_a =8.34(88)\mathrm{k}\Omega < R_b =159.(3)\mathrm{k}\Omega $ due the the availability of resistors in the market. Then, the DC gain is 
 \begin{equation}
 %\label{eq:dewtf}
     \mathrm{DewTF}\ \rvert_{\omega=0} = \frac{2}{1+\frac{R_b}{R_a}} = 0.0996
 \end{equation}
-
 It is about a factor of ten suppression of low-frequency signals while gains of high-frequency signals are kept unity.
 The pole and zero frequencies of such circuit are
 \begin{align}
 %\label{eq:dewzp}
-    \mathrm{Zero} &= \frac{1}{2 \pi C (a+R_a)} = OOO \mathrm{Hz} \\
-    \mathrm{Pole} &= \frac{1}{2 \pi C (a+2\frac{R_a R_b}{R_a+R_b})} = OOO \mathrm{Hz}
+    \mathrm{Zero} &= \frac{1}{2 \pi C (a+R_a)} = 99.8 \mathrm{Hz} \\
+    \mathrm{Pole} &= \frac{1}{2 \pi C (a+2\frac{R_a R_b}{R_a+R_b})} = 996.8 \mathrm{Hz}
 \end{align}
- An overall transfer function simulated with LTspice is shown in Fig. XX 
+% An overall transfer function simulated with LTspice is shown in Fig. XX 
 
 %\begin{figure}[hbt!]
 %\centering
@@ -80,7 +74,7 @@ The pole and zero frequencies of such circuit are
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/dewPhoto.jpg}
-\caption[De-Whitening filter board]{De-Whitening filter board. It's a 1.6mm FR-4 printed circuit board manufactured by SPEEDY Circuits Co., Ltd. The layout of this board is done with EAGLE, an EDA software. Four large yellow capacitors are Mica capacitors for the pole-zero stage. At KAGRA site, we installed it into a 1U chassis powered by a DC power supply with LM317/LM337 voltage regulation circuit designed by LIGO.}
+\caption[De-Whitening filter board]{De-Whitening filter board. It's a 1.6mm FR-4 printed circuit board manufactured by SPEEDY Circuits Co., Ltd. The layout of this board is done with EAGLE, an EDA software. Four large yellow capacitors are Mica capacitors for the pole-zero stage. At KAGRA site, we installed it into a 1U chassis powered by a DC power supply with a LM2941/LM2991 voltage regulation circuit designed by LIGO.}
 \label{fig:board}
 \index{figures}
 \end{figure}
@@ -116,7 +110,7 @@ The experimental setup is depicted in Fig.~\ref{fig:dew_setup} and Fig.~\ref{fig
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/dew_setup.pdf}
-\caption[setup]{In order to reduce the noise coming from the digital system, the De-Whitening filter can be installed at either place A or B.    }
+\caption[Noise Measurement Setup]{In order to reduce the noise coming from the digital system, the De-Whitening filter can be installed at either place A or B.    }
 \label{fig:dew_setup}
 \index{figures}
 \end{figure}
@@ -124,7 +118,7 @@ The experimental setup is depicted in Fig.~\ref{fig:dew_setup} and Fig.~\ref{fig
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/dew_setup2m.pdf}
-\caption[setup]{For our reference, we also measured the noise from the digital system without passing through the control loop of PCal. Place C means we connect De-Whitening filter in digital system rack with 2m cable only in order to investigate the influence from 50m cable.}
+\caption[Noise Measurement Setup]{For our reference, we also measured the noise from the digital system without passing through the control loop of PCal. Place C means we connect De-Whitening filter in digital system rack with 2m cable only in order to investigate the influence from 50m cable.}
 \label{fig:dew_setup2m}
 \index{figures}
 \end{figure}
@@ -217,7 +211,7 @@ First, we try to understand how much low-frequency noise could be suppressed by 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/noise/01_all}
-\caption[Noise]{ Noise measurement with PCal. These noises can be considered as laser intensity noises since we are measuring photodiode readout as depicted in Fig.~\ref{fig:dew_setup}. The blue line is the case without De-Whitening filer, while the red line is the case when De-Whitening filer has been installed at place A in Fig.~\ref{fig:dew_setup}. The orange line is measured when we disconnect our signal cable from the Laser Intensity Control Servo input port.}
+\caption[Noise measurement with PCal]{ Noise measurement with PCal. These noises can be considered as laser intensity noises since we are measuring photodiode readout as depicted in Fig.~\ref{fig:dew_setup}. The blue line is the case without De-Whitening filer, while the red line is the case when De-Whitening filer has been installed at place A in Fig.~\ref{fig:dew_setup}. The orange line is measured when we disconnect our signal cable from the Laser Intensity Control Servo input port.}
 \label{fig:01_all}
 \index{figures}
 \end{figure}
@@ -227,7 +221,7 @@ On the other hand, the orange line is the nosies when we disconnect the digital 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/noise/01_AvsB}
-\caption[Noise]{ The red line and the blue line are measured when De-whitening is located at Place A and Place B in Fig.~\ref{fig:dew_setup} respectively.}
+\caption[Noise measurement with PCal and different location of the De-whitening]{ The red line and the blue line are measured when De-whitening is located at Place A and Place B in Fig.~\ref{fig:dew_setup} respectively.}
 \label{fig:01_AvsB}
 \index{figures}
 \end{figure}
@@ -239,7 +233,7 @@ Fig.~\ref{fig:01_AvsB} shows that if we install our De-Whitening filter at Place
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/noise/01_SP}
-\caption[Noise]{ Lines labeled with ``SP'' were measured when we supplied digital system, De-Whitening filter and PCal with Same Power source located in digital system rack. }
+\caption[Noise measurement with PCal and different power source]{ Lines labeled with ``SP'' were measured when we supplied digital system, De-Whitening filter and PCal with Same Power source located in digital system rack. }
 \label{fig:01_SP}
 \index{figures}
 \end{figure}
