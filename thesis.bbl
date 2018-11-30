@@ -23,14 +23,14 @@ A~Einstein.
 
 \bibitem[Kennefick(2005)]{Einstein:prl}
 Daniel Kennefick.
-\newblock Einstein versus the physical review.
+\newblock {Einstein Versus the Physical Review}.
 \newblock \emph{Physics Today}, 58\penalty0 (9):\penalty0 43--48, 2005.
 \newblock \doi{10.1063/1.2117822}.
 \newblock URL \url{https://doi.org/10.1063/1.2117822}.
 
 \bibitem[Einstein and Rosen(1937)]{Einstein:ongw}
 A.~Einstein and N.~Rosen.
-\newblock On gravitational waves.
+\newblock {On gravitational waves}.
 \newblock \emph{Journal of the Franklin Institute}, 223\penalty0 (1):\penalty0
   43 -- 54, 1937.
 \newblock ISSN 0016-0032.
@@ -53,14 +53,14 @@ J.~H. {Taylor} and J.~M. {Weisberg}.
 
 \bibitem[Taylor(1994)]{HulseTaylor:gr2}
 Joseph~H. Taylor.
-\newblock Binary pulsars and relativistic gravity.
+\newblock {Binary pulsars and relativistic gravity}.
 \newblock \emph{Rev. Mod. Phys.}, 66:\penalty0 711--719, Jul 1994.
 \newblock \doi{10.1103/RevModPhys.66.711}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.66.711}.
 
 \bibitem[et~al.(2016{\natexlab{a}})]{gw:150914_det}
 B.~P.~Abbott et~al.
-\newblock Observation of gravitational waves from a binary black hole merger.
+\newblock {Observation of Gravitational Waves from a Binary Black Hole Merger}.
 \newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, Feb
   2016{\natexlab{a}}.
 \newblock \doi{10.1103/PhysRevLett.116.061102}.
@@ -68,15 +68,15 @@ B.~P.~Abbott et~al.
 
 \bibitem[Maggiore and Press(2008)]{maggiore:gw1}
 M.~Maggiore and Oxford~University Press.
-\newblock \emph{Gravitational Waves: Volume 1: Theory and Experiments}.
+\newblock \emph{{Gravitational Waves: Volume 1: Theory and Experiments}}.
 \newblock Gravitational Waves. OUP Oxford, 2008.
 \newblock ISBN 9780198570745.
 \newblock URL \url{https://books.google.com.tw/books?id=AqVpQgAACAAJ}.
 
 \bibitem[Rakhmanov(2005)]{ifo:gauge}
 Malik Rakhmanov.
-\newblock Response of test masses to gravitational waves in the local lorentz
-  gauge.
+\newblock {Response of test masses to gravitational waves in the local Lorentz
+  gauge}.
 \newblock \emph{Phys. Rev. D}, 71:\penalty0 084003, Apr 2005.
 \newblock \doi{10.1103/PhysRevD.71.084003}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.71.084003}.
@@ -95,8 +95,8 @@ Evan~D. Hall, Craig Cahillane, Kiwamu Izumi, Rory J.~E. Smith, and Rana~X.
 A~D Viets, M~Wade, A~L Urban, S~Kandhasamy, J~Betzwieser, Duncan~A Brown,
   J~Burguet-Castell, C~Cahillane, E~Goetz, K~Izumi, S~Karki, J~S Kissel,
   G~Mendell, R~L Savage, X~Siemens, D~Tuyenbayev, and A~J Weinstein.
-\newblock Reconstructing the calibrated strain signal in the advanced ligo
-  detectors.
+\newblock {Reconstructing the calibrated strain signal in the Advanced LIGO
+  detectors}.
 \newblock \emph{Classical and Quantum Gravity}, 35\penalty0 (9):\penalty0
   095015, 2018.
 \newblock URL \url{http://stacks.iop.org/0264-9381/35/i=9/a=095015}.
@@ -106,8 +106,8 @@ A~D Viets, M~Wade, A~L Urban, S~Kandhasamy, J~Betzwieser, Duncan~A Brown,
   Savage]{ligo:timedep}
 D~Tuyenbayev, S~Karki, J~Betzwieser, C~Cahillane, E~Goetz, K~Izumi,
   S~Kandhasamy, J~S Kissel, G~Mendell, M~Wade, A~J Weinstein, and R~L Savage.
-\newblock Improving ligo calibration accuracy by tracking and compensating for
-  slow temporal variations.
+\newblock {Improving LIGO calibration accuracy by tracking and compensating for
+  slow temporal variations}.
 \newblock \emph{Classical and Quantum Gravity}, 34\penalty0 (1):\penalty0
   015002, 2017.
 \newblock URL \url{http://stacks.iop.org/0264-9381/34/i=1/a=015002}.
@@ -115,64 +115,64 @@ D~Tuyenbayev, S~Karki, J~Betzwieser, C~Cahillane, E~Goetz, K~Izumi,
 \bibitem[Clubley et~al.(2001)Clubley, Newton, Skeldon, and
   Hough]{pcal:clubley2001}
 DA~Clubley, GP~Newton, KD~Skeldon, and J~Hough.
-\newblock Calibration of the glasgow 10 m prototype laser interferometric
-  gravitational wave detector using photon pressure.
+\newblock {Calibration of the Glasgow 10 m prototype laser interferometric
+  gravitational wave detector using photon pressure}.
 \newblock \emph{Physics Letters A}, 283\penalty0 (1-2):\penalty0 85--88, 2001.
 
 \bibitem[Daveloza et~al.(2012)Daveloza, Badhan, Diaz, Kawabe, Konverski,
   Landry, and Savage]{pcal:Daveloza2012}
 H~P Daveloza, M~Afrin Badhan, M~Diaz, K~Kawabe, P~N Konverski, M~Landry, and
   R~L Savage.
-\newblock Controlling calibration errors in gravitational-wave detectors by
-  precise location of calibration forces.
+\newblock {Controlling calibration errors in gravitational-wave detectors by
+  precise location of calibration forces}.
 \newblock \emph{Journal of Physics: Conference Series}, 363\penalty0
   (1):\penalty0 012007, 2012.
 \newblock URL \url{http://stacks.iop.org/1742-6596/363/i=1/a=012007}.
 
 \bibitem[et~al.(2016{\natexlab{b}})]{pcal:karki2016}
 S.~Karki et~al.
-\newblock The advanced ligo photon calibrators.
+\newblock {The Advanced LIGO photon calibrators}.
 \newblock \emph{Rev. Sci. Instrum.}, 87:\penalty0 114503, 2016{\natexlab{b}}.
 
 \bibitem[Bork(2010)]{dgs:overview}
 Rolf Bork.
-\newblock Advligo cds design overview.
+\newblock {AdvLigo CDS Design Overview}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T0900612),
   2010.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T0900612/public}.
 
 \bibitem[R.~Abbott(2007)]{dgs:aaai}
 J.~Heefner R.~Abbott.
-\newblock Advanced ligo anti-aliasing and anti-image filter function.
+\newblock {Advanced LIGO Anti-aliasing and Anti-image Filter Function}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T070038),
   2007.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T070038/public}.
 
 \bibitem[Bork and Ivanov(2012)]{dgs:control.c}
 R.~Bork and A.~Ivanov.
-\newblock Advligo cds realtime sequencer software.
+\newblock {AdvLigo CDS Realtime Sequencer Software}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T0900607),
   2012.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T0900607/public}.
 
 \bibitem[Bork(2012)]{dgs:rcg}
 R.~Bork.
-\newblock Real-time code generator (rcg) software component overview.
+\newblock {Real-time Code Generator (RCG) Software Component Overview}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T1200291),
   2012.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T1200291/public}.
 
 \bibitem[R.~Bork(2013)]{dgs:software_app}
 A.~Ivanov R.~Bork, M.~Aronsson.
-\newblock Advligo cds realtime code generator (rcg) application developer's
-  guide.
+\newblock {AdvLigo CDS Realtime Code Generator (RCG) Application Developer's
+  Guide}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T080135),
   2013.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T080135/public}.
 
 \bibitem[et~al.(2017{\natexlab{b}})]{kagra:sn}
 Y.~Enomoto et~al.
-\newblock Latest estimated sensitivity of kagra (v201708) *approved*.
+\newblock {Latest estimated sensitivity of KAGRA (v201708) *APPROVED*}.
 \newblock \emph{JGW Document Database}, \penalty0 (Report No. JGW-T1707038-v7),
   2017{\natexlab{b}}.
 \newblock URL
@@ -180,14 +180,14 @@ Y.~Enomoto et~al.
 
 \bibitem[et~al.(2016{\natexlab{c}})]{ligo:o1bbh}
 B.~P.~Abbott et~al.
-\newblock Binary black hole mergers in the first advanced ligo observing run.
+\newblock {Binary Black Hole Mergers in the First Advanced LIGO Observing Run}.
 \newblock \emph{Phys. Rev. X}, 6:\penalty0 041015, Oct 2016{\natexlab{c}}.
 \newblock \doi{10.1103/PhysRevX.6.041015}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevX.6.041015}.
 
 \bibitem[Pandey et~al.(2015)Pandey, Wipf, Adhikari, and Rollins]{dac:shaping}
 Ayush Pandey, Christopher Wipf, Rana Adhikari, and Jameson~Graef Rollins.
-\newblock Quantization noise in advanced ligo digital control systems.
+\newblock {Quantization Noise in Advanced LIGO Digital Control Systems}.
 \newblock \emph{LIGO Document Control Center}, \penalty0 (Report No. T1500351),
   2015.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T1500351/public}.

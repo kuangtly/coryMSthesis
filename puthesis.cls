@@ -67,26 +67,32 @@
   \begin{center}
     \LARGE \@title
   \end{center}
-  \vspace{.6in}
-  \extravspace{.6in}
+  \vspace{.5in}
+  \extravspace{.5in}
   \begin{center}
     \@author
   \end{center}
-  \vspace{.6in}
-  \extravspace{.6in}
+  \vspace{.5in}
+  \extravspace{.5in}
   \begin{center}
 %    A Dissertation \\
 %    Presented to the Faculty \\
 %    of Princeton University \\
 %    in Candidacy for the Degree \\
 %    of Doctor of Philosophy
-    
-    \includegraphics[width=3in]{NTNU.png} \\
+    A Dissertation 
+    Submitted in Partial Fulfillment  \\
+    of the Requirements for the Degree 
+    of Master of Science
+\vspace{.5in}
+\extravspace{.5in}
+
+\includegraphics[width=3in]{NTNU.png} \\
 
   \end{center}
 
   \vspace{.3in}
-  \extravspace{.3in}
+%  \extravspace{.3in}
   \begin{center}
     Recommended for Acceptance \\
     by the \@deptpref \\

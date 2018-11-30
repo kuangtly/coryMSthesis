@@ -6,7 +6,7 @@
 Considering a situation in which the Photon Calibrator received white, i.e.~frequency independent, excitation signal noise, it will generate $1/f^2$ displacement noise on End-Test-Mirror because the force-to-displacement transfer function contains a $1/f^2$ feature. If we put an analog filter that has frequency response proportional to $f^2$ between the excitation signal and the PCal excitation input port, we may create colored, $f^2$, laser intensity noise from white electrical noise of the excitation signal. Then, such colored noise will be whitened by the $1/f^2$ force-to-displacement transfer function, becoming white displacement noise. We call the $f^2$ analog filter \emph{De-Whitening filter}.
 
 
-Practically, we use a single zero-pole analog filter with transfer function showed in Fig.(\ref{fig:DEWtf_design}) as our De-Whitening filter. 
+Practically, we use a single zero-pole analog filter with transfer function shown in Fig.(\ref{fig:DEWtf_design}) as our De-Whitening filter. 
 
 \begin{figure}[hbt!]
 \centering
@@ -138,6 +138,7 @@ Label in legend  & Description        \\
 AI      & Anti-Alias  Chassis with Whitening Filter (as a preamplifier) \\
 AA      & Anti-Image  Chassis   \\
 DEW     & De-Whitening Filter   \\
+OFS     & Optical-Follower-Servo, the circuit controls PCal laser intensity.\\
 \hline
 \end{tabular}
 \caption{Acronym of devices in noise measurement plots}
@@ -155,12 +156,12 @@ As described in Fig.(\ref{fig:dew_setup2m}), we have compared the noise from dig
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=1\textwidth]{figure/noise/00_2m}
-\caption[De-Whitening filter noise with short cable]{ De-Whitening filter noise with short (2m) cable. The green line is the noise without De-Whitening filter, while the red one is the noise with De-Whitening filter.   }
+\caption[De-Whitening filter noise with short cable]{ De-Whitening filter noise with short (2m) cable. The green line is the noise without De-Whitening filter, while the red one is the noise with De-Whitening filter. Legends indicate relevant devices and cables in their connection order. For example,``AI-DEW-2m-AA" means that the noise measurement includes effects from with an AI filter, a DEW filter, a 2m cable and an AA filter connected in sequence. The list of abbreviations is given in Table~\ref{tab:acronym_legend}  }
 \label{fig:00_2m}
 \index{figures}
 \end{figure}
 
-Fig.(\ref{fig:00_2m}) is the noise measurement result with 2m signal cable as described in Fig.(\ref{fig:dew_setup2m}). The low-frequency noise is suppressed by De-Whitening circuit. However, the amount of suppressing is not 20dB. It is possible that we hit another noise floor at $10^{-7}\mathrm{V}/\sqrt{\mathrm{Hz}}$ due to the internal noise of the De-Whitening filter circuit. Below 10Hz, the measured noise is less than actual noise since we used the a customized high-pass filter, i.e.\ a Whitening Chassis, to prevent the saturation of measurement instrument by any small DC offset. Same effect is exist in all noise measurement results in this thesis since we adopted same measuring scheme.
+Fig.(\ref{fig:00_2m}) is the noise measurement result with 2m signal cable as described in Fig.(\ref{fig:dew_setup2m}). The low-frequency noise is suppressed by De-Whitening circuit. However, the amount of suppressing is not 20dB. It is possible that we hit another noise floor at $10^{-7}\mathrm{V}/\sqrt{\mathrm{Hz}}$ due to the internal noise of the De-Whitening filter circuit. Below 10Hz, the measured noise is less than actual noise since we used the a customized high-pass filter, i.e.\ a Whitening Chassis, to prevent the saturation of measurement instrument by any small DC offset. The same effect exists in all noise measurement results in this thesis since we adopted same measuring scheme.
 
 
 In the end station of KAGRA, unfortunately, the digital system rack is placed near the ETM, which is 36m far away from PCal system. Therefore, the practical control signal is carried by 50m D-sub cables as illustrated in Fig.(\ref{fig:dew_setup}) at this moment. As a result, we tried to perform the same noise measurement with 50m cables. The result is in Fig.(\ref{fig:00_50m}).
@@ -172,7 +173,7 @@ In the end station of KAGRA, unfortunately, the digital system rack is placed ne
 \index{figures}
 \end{figure}
 
-With 50m cable, the unsuppressed noise (green line in Fig.(\ref{fig:00_50m})) is larger than 2m one (green line in Fig.(\ref{fig:00_2m})) due to unknown reason. However, the 20dB suppression capability can be verified in Fig.(\ref{fig:00_50m}). 
+With 50m cable, the unsuppressed noise (green line in Fig.(\ref{fig:00_50m})) is larger than the one with 2m cable (green line in Fig.(\ref{fig:00_2m})) due to unknown reason. However, the 20dB suppression capability below 100 Hz can be verified in Fig.(\ref{fig:00_50m}). 
 
 
 
@@ -190,7 +191,7 @@ With 50m cable, the unsuppressed noise (green line in Fig.(\ref{fig:00_50m})) is
 
 In Fig.(\ref{fig:00_bothm}), we overplot the suppressed noise by De-Whitening filter in 2m and 50m cable case. Although the 50m case has some noise excess around kHz regime, their low-frequency noise performance do not have significant difference. This result imply that the $10^{-7}\mathrm{V}/\sqrt{\mathrm{Hz}}$ noise floor can really come from De-Whitening circuit itself. In the future, we may come back into this issue when we have more strict noise requirement that will be the case if we decide to use higher power Pcal laser or have better interferometer sensitivity.
 
-Since we observed that the unattenuated noise floor in 50m cable case is larger, we suspect that some environmental noises are picked up by the cable. We tried to install our De-Whitening filter in either place A or B in Fig.\ref{fig:dew_setup2m} and the result is in Fig.\ref{fig:00_DSP}. Originally, we thought if the extra noise is picked up by the cable, it should be attenuated when we install the De-Whitening filter at place B. However, the red line in Fig.\ref{fig:00_DSP} shows that if we put our De-Whitening filter at place B, the measured noise is actually higher than the one without De-Whitening filter. 
+Since we observed that the unattenuated noise floor in 50m cable case is larger, we suspect that some environmental noises are picked up by the cable. We tried to install our De-Whitening filter in either place A or B in Fig.\ref{fig:dew_setup2m} and the noise measurement results are shown in Fig.\ref{fig:00_DSP}. Originally, we thought if the extra noise is picked up by the cable, it should be attenuated when we install the De-Whitening filter at place B. However, the red line in Fig.\ref{fig:00_DSP} shows that if we put our De-Whitening filter at place B, the measured noise is actually higher than the one without De-Whitening filter. 
 
 
 \begin{figure}[hbt!]
@@ -216,7 +217,7 @@ First, we try to understand how much low-frequency noise could be suppressed by 
 \index{figures}
 \end{figure}
 
-On the other hand, the orange line is the nosies when we disconnect the digital system output from our PCal. It is lower than either one of connected cases (blue and red). Besides, it is also higher than the noise that are plotted in Fig.(\ref{fig:00_bothm}), which is supposed to be the noise that be sent to PCal from the output of De-Whitening filter. It reveals that the blue and the red lines in Fig.~\ref{fig:01_all} is actually popped out just when we connect the digital system and our PCal together. We doubt that we may create the infamous grounding loop unintentionally. As a trial, we tried two different measurements. First, we put our De-Whitening filter in either palace A or B in Fig.~\ref{fig:dew_setup} and the result is in Fig.~\ref{fig:01_AvsB}. Second, we supplied our Pcal from the DC power source located at digital system rack, which is shared with De-Whitening filter and other analog chassis of the digital system, including Anti-Image, Anti-Alias, and Whiting chassis. The result is given in Fig.~\ref{fig:01_SP}.
+On the other hand, the orange line is the nosies when we disconnect the digital system output from our PCal. It is lower than either one of connected cases (blue and red). Besides, it is also higher than the noise that are plotted in Fig.(\ref{fig:00_bothm}), which is supposed to be the noise sent to PCal from the output of De-Whitening filter. It reveals that the blue and the red lines in Fig.~\ref{fig:01_all} are actually popped out just when we connect the digital system and our PCal together. We doubt that we may create the infamous grounding loop unintentionally. As a trial, we did two different measurements. First, we put our De-Whitening filter in either palace A or B in Fig.~\ref{fig:dew_setup} and the result is in Fig.~\ref{fig:01_AvsB}. Second, we supplied our Pcal from the DC power source located at digital system rack, which is shared with De-Whitening filter and other analog chassis of the digital system, including Anti-Image, Anti-Alias, and Whiting chassis. The result is given in Fig.~\ref{fig:01_SP}.
 
 \begin{figure}[hbt!]
 \centering
@@ -238,4 +239,4 @@ Fig.~\ref{fig:01_AvsB} shows that if we install our De-Whitening filter at Place
 \index{figures}
 \end{figure}
 
-When we supply our PCal with the shared power source in the digital system rack, the noise floors become independent of the location of De-Whitening filter as you can observe in Fig.~\ref{fig:01_SP}. They are also coincident with the red line in the plot. Among measurements we have tried, whenever the De-Whitening filter is supplied by the same power source as Anti-Image chassis, which is the upstream device of De-Whitening filter, the noise floor we get becomes the same as the red line in Fig.~\ref{fig:01_SP}.
+When we supply our PCal with the shared power source in the digital system rack, the noise floors become independent of the location of the De-Whitening filter as you can observe in Fig.~\ref{fig:01_SP}. They are also coincident with the red line in the plot. Among measurements we have tried, whenever the De-Whitening filter is supplied by the same power source as the Anti-Image chassis, which is the upstream device of De-Whitening filter, the noise floor became the same as the red line in Fig.~\ref{fig:01_SP}.

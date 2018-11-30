@@ -1,0 +1,37 @@
+Abstract           ii
+Acknowledgements   iii
+List of Tables     viii
+List of Figures    ix
+
+
+1 Introduction      1
+1.1 Introduction to Gravitational Waves      2
+1.1.1 What are gravitational waves      2
+1.1.2 How to describe gravitational wave      3
+1.2 Detection and Reconstruction of Gravitational Wave Signals      5
+1.3 Photon Calibrator (Pcal)      7
+1.3.1 Principle of Photon Calibrator      7
+1.3.2 Evolution of Photon Calibrators      10
+
+2 Hardware Injection through Photon Calibrator      13
+2.1 Principle      13
+2.2 Experimental Setup      15
+
+3 Signal Generating System      16
+3.1 KAGRA Digital Control System      16
+3.2 Noise Problem of Injection Signal      19
+3.2.1 Noise Sources from the Injection Signal      20
+
+4 Noise Reduction through De-Whitening Filter      22
+4.1 Concept of De-Whitening Filter      22
+4.2 Circuit Design      23
+4.3 Fidelity of Injection Signals      26
+4.4 Noise Reduction Performance      28
+4.4.1 Noise Measurement without PCal System      30
+4.4.2 Noise Measurement with PCal System      34
+
+5 Validation of Injection Channel      37
+
+6 Discussion and Future Works Bibliography      41
+
+Bibliography      43
